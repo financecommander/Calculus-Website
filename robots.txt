@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.calculusresearch.io/sitemap.xml
+
+# AI Crawler Access
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Calculus — Financial Innovations
+# https://www.calculusresearch.io

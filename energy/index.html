@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renewable Energy &amp; Biomass Plants | Calculus</title>
+  <meta name="description" content="Calculus develops and acquires renewable energy assets with a primary focus on biomass power plants across North America. Baseload renewable generation, carbon-neutral electricity, and long-term PPA-backed infrastructure.">
+  <meta name="keywords" content="biomass power plants, renewable energy, biomass energy, wood biomass, baseload renewable, power purchase agreement, PPA, renewable energy developer, North America biomass, carbon neutral energy">
+  <meta property="og:title" content="Renewable Energy & Biomass Plants | Calculus Research">
+  <meta property="og:description" content="Renewable energy assets focused on biomass power plants in North America. Baseload generation, PPA-backed, carbon-neutral.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.calculusresearch.io/energy/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Renewable Energy & Biomass | Calculus">
+  <meta name="twitter:description" content="Biomass power plants & renewable energy assets across North America.">
+  <link rel="canonical" href="https://www.calculusresearch.io/energy/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C',
+            'cr-green-600': '#3E9B5F',
+            'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22',
+            'cr-surface': '#F7F9F8',
+            'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1',
+            'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545',
+            'cr-info': '#2F6FED',
+            'cr-success': '#2E8B57',
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'cr-sm': '0 1px 2px rgba(0,0,0,.06)',
+            'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)',
+            'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(135deg, rgba(28,31,34,0.88), rgba(15,77,44,0.72)), url('https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .nav-link.active::after { width: 100%; }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .chevron { transition: transform 0.3s ease; }
+    details[open] summary .chevron { transform: rotate(180deg); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Calculus Energy",
+    "description": "Calculus develops and acquires renewable energy assets with a primary focus on biomass power plants across North America. The firm targets baseload renewable generation facilities backed by long-term power purchase agreements (PPAs), producing carbon-neutral electricity from sustainably sourced wood fiber, agricultural residues, and other organic feedstocks.",
+    "url": "https://www.calculusresearch.io/energy/",
+    "foundingDate": "2020",
+    "founder": {"@type": "Person", "name": "Sean Grady", "jobTitle": "Founder & CEO"},
+    "address": [
+      {"@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US"},
+      {"@type": "PostalAddress", "addressLocality": "Windsor", "addressRegion": "CT", "addressCountry": "US"}
+    ],
+    "areaServed": "North America",
+    "serviceType": ["Biomass Power Plants", "Renewable Energy Development", "Baseload Renewable Generation", "Power Purchase Agreements"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is biomass energy and why does Calculus focus on it?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Biomass energy generates electricity by combusting organic materials such as sustainably sourced wood fiber, forest residues, agricultural byproducts, and other cellulosic feedstocks. Unlike intermittent renewables like solar and wind, biomass plants provide baseload generation, producing reliable 24/7 power output regardless of weather conditions. Calculus focuses on biomass because it delivers dispatchable, carbon-neutral electricity with established technology, long-term power purchase agreements (PPAs), and Renewable Energy Certificate (REC) revenue streams. Biomass plants also support rural economies through fuel supply chain employment and sustainable forest management."}
+      },
+      {
+        "@type": "Question",
+        "name": "Where does Calculus develop and acquire biomass plants?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Calculus targets biomass power plants across North America, with a focus on regions with abundant sustainably managed forest resources and supportive renewable energy policy frameworks. Primary markets include the Northeastern United States, Southeastern United States, Eastern Canada, and the Pacific Northwest. The firm acquires operating facilities, develops greenfield projects, and repositions underperforming assets through operational improvements and fuel supply optimization."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does biomass qualify as renewable energy?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Biomass qualifies as renewable energy because the organic feedstocks used for fuel are regrown on a sustainable cycle. When forests are managed responsibly, the carbon released during combustion is reabsorbed by new growth, making the process carbon-neutral over the harvest cycle. Biomass energy is recognized as renewable by the U.S. EPA, most state Renewable Portfolio Standards (RPS), and international frameworks. Biomass plants generate Renewable Energy Certificates (RECs) that utilities and corporations purchase to meet clean energy mandates."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a Power Purchase Agreement and how does it apply to biomass?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A Power Purchase Agreement (PPA) is a long-term contract between a power generator and an offtaker (typically a utility or large corporation) that guarantees the purchase of electricity at a fixed or escalating price over a defined term, often 10 to 25 years. Biomass plants backed by PPAs provide predictable, contracted revenue streams that support project financing and deliver stable cash yields to investors. Calculus targets biomass assets with existing or re-contractable PPAs to ensure long-term cash flow visibility."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does Calculus invest in other renewable energy technologies besides biomass?",
+        "acceptedAnswer": {"@type": "Answer", "text": "While biomass power plants are the primary focus, Calculus also evaluates complementary renewable energy opportunities including co-generation (combined heat and power), waste-to-energy facilities, biogas and landfill gas projects, and hybrid installations that pair biomass with solar. The firm prioritizes assets that generate baseload or dispatchable renewable power with contracted revenue and tangible infrastructure value."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+  <!-- NAVBAR -->
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link active text-cr-green-900 cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-green-900 font-medium transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center">
+    <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+      <div class="inline-block bg-cr-surface2 border border-cr-border text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-8">
+        Renewable Energy &amp; Infrastructure
+      </div>
+      <h1 class="heading-font text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+        Powering North America
+      </h1>
+      <p class="max-w-3xl mx-auto text-lg md:text-xl text-cr-charcoal/70 mb-10 leading-relaxed">
+        We develop and acquire renewable energy assets with a primary focus on biomass power plants &mdash; delivering baseload, carbon-neutral electricity backed by long-term power purchase agreements.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="/contact/" class="bg-white text-cr-charcoal px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-cr-surface2 transition">Discuss an Opportunity</a>
+        <a href="#platform" class="border border-white/40 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition">Our Platform</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-cr-mist">
+        <div class="flex items-center gap-2"><i class="fas fa-fire text-cr-green-900"></i> Biomass &amp; Wood-Fired</div>
+        <div class="flex items-center gap-2"><i class="fas fa-bolt text-cr-green-900"></i> Baseload 24/7 Generation</div>
+        <div class="flex items-center gap-2"><i class="fas fa-file-contract text-cr-green-900"></i> PPA-Backed Revenue</div>
+        <div class="flex items-center gap-2"><i class="fas fa-leaf text-cr-green-900"></i> Carbon Neutral</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="py-16 bg-cr-surface border-y border-cr-border">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">250+ MW</div>
+        <div class="text-cr-mist mt-2 text-sm">Generation Capacity</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">24/7</div>
+        <div class="text-cr-mist mt-2 text-sm">Baseload Dispatch</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">10-25 Yr</div>
+        <div class="text-cr-mist mt-2 text-sm">PPA Contract Terms</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">Carbon 0</div>
+        <div class="text-cr-mist mt-2 text-sm">Net-Zero Lifecycle</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BIOMASS -->
+  <section id="platform" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Why Biomass</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">The Case for Biomass Energy</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">Biomass is the only renewable energy source that delivers dispatchable, baseload power 24 hours a day, 365 days a year &mdash; independent of weather, daylight, or grid intermittency.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-plug-circle-bolt text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 heading-font">Baseload Reliability</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Unlike solar and wind, biomass generates power around the clock regardless of weather. Plants operate at 85-95% capacity factors, providing the grid with stable, dispatchable megawatts.</p>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-leaf text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 heading-font">Carbon-Neutral Lifecycle</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Sustainably sourced wood fiber and forest residues are regrown on a managed cycle. CO2 released during combustion is reabsorbed by new growth, making biomass carbon-neutral over the harvest rotation.</p>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-file-contract text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 heading-font">PPA-Backed Cash Flows</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Long-term power purchase agreements with utilities and corporate offtakers provide 10-25 years of contracted revenue, delivering predictable cash yields backed by essential-service infrastructure.</p>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-certificate text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 heading-font">REC Revenue</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Biomass plants generate Renewable Energy Certificates (RECs) that utilities and corporations purchase to meet state Renewable Portfolio Standards (RPS) and voluntary clean energy commitments.</p>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-tree text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 heading-font">Sustainable Forestry</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Our fuel supply chains source from sustainably managed timberlands, utilizing low-grade wood, sawmill residuals, and forest thinnings that support wildfire prevention and healthy forest ecosystems.</p>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-users text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 heading-font">Rural Economic Impact</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Each biomass plant supports dozens of direct jobs and hundreds of indirect jobs through fuel harvesting, transportation, and processing &mdash; providing economic anchors in rural communities.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Our Approach</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">How We Build Our Portfolio</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">We acquire, develop, and optimize biomass and renewable energy assets through a disciplined infrastructure investment approach.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5">1</div>
+          <h4 class="font-semibold mb-2">Identify &amp; Acquire</h4>
+          <p class="text-cr-mist text-sm">Source operating biomass facilities, greenfield sites, or distressed assets with strong fundamentals and re-contracting potential across North America.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5">2</div>
+          <h4 class="font-semibold mb-2">Optimize Operations</h4>
+          <p class="text-cr-mist text-sm">Improve plant efficiency, negotiate favorable fuel supply contracts, reduce O&amp;M costs, and maximize capacity factor through operational best practices.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5">3</div>
+          <h4 class="font-semibold mb-2">Secure Offtake</h4>
+          <p class="text-cr-mist text-sm">Negotiate and extend power purchase agreements with utilities, municipalities, and corporate buyers. Monetize RECs and capacity payments for layered revenue.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5">4</div>
+          <h4 class="font-semibold mb-2">Scale &amp; Hold</h4>
+          <p class="text-cr-mist text-sm">Build a long-term portfolio of contracted renewable infrastructure assets generating stable, tax-advantaged cash distributions to investors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSET TYPES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Asset Classes</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">Renewable Energy Assets We Target</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">Biomass is our core focus. We also evaluate complementary renewable technologies that share our thesis of contracted, dispatchable generation.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Biomass - Primary -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover flex flex-col relative">
+          <div class="absolute top-6 right-6">
+            <span class="bg-cr-green-900 text-cr-charcoal text-xs font-bold px-3 py-1 rounded-full">Primary Focus</span>
+          </div>
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-fire text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Biomass Power Plants</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Wood-fired and cellulosic biomass facilities generating 10-100+ MW of baseload renewable electricity. Our primary asset class and deepest domain expertise across North America.</p>
+          <ul class="text-sm text-cr-mist space-y-2.5 mb-6 flex-grow">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Stoker, fluidized bed &amp; gasification technologies</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Wood fiber, forest residue &amp; sawmill byproduct fuel</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> 85-95% capacity factors, 24/7/365 dispatch</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> RPS-eligible RECs across multiple state markets</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Northeast, Southeast, Eastern Canada &amp; Pacific Northwest</li>
+          </ul>
+        </div>
+
+        <!-- Co-Gen / CHP -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-industry text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Combined Heat &amp; Power (CHP)</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Biomass co-generation facilities that produce both electricity and process steam for industrial and district heating applications, maximizing fuel efficiency and revenue per BTU.</p>
+          <ul class="text-sm text-cr-mist space-y-2.5 mb-6 flex-grow">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Dual revenue: electricity + thermal steam sales</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Industrial campus &amp; district energy applications</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> 70-85% overall thermal efficiency</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Essential-service offtake contracts</li>
+          </ul>
+        </div>
+
+        <!-- Waste-to-Energy -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-recycle text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Waste-to-Energy &amp; Biogas</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Anaerobic digestion, landfill gas capture, and waste-to-energy facilities that convert organic waste streams into renewable electricity and pipeline-quality gas.</p>
+          <ul class="text-sm text-cr-mist space-y-2.5 mb-6 flex-grow">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Landfill gas-to-energy (LFGTE) projects</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Agricultural &amp; food waste anaerobic digestion</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Renewable natural gas (RNG) production</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Tipping fee + energy revenue dual streams</li>
+          </ul>
+        </div>
+
+        <!-- Hybrid / Complementary -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-solar-panel text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Hybrid &amp; Complementary Renewables</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Selective co-located solar, battery storage, and biomass hybrid installations that combine intermittent and baseload generation for enhanced grid value and revenue optimization.</p>
+          <ul class="text-sm text-cr-mist space-y-2.5 mb-6 flex-grow">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Biomass + solar co-location on existing sites</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Battery storage for peak shaving &amp; ancillary services</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Shared interconnection &amp; infrastructure</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Enhanced capacity value &amp; grid reliability</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET MARKETS -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Geographic Focus</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">Target Markets Across North America</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">We focus on regions with strong biomass fuel supply, supportive renewable energy policy, and robust wholesale power markets.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="bg-white border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-flag-usa text-cr-green-600"></i>
+          </div>
+          <h4 class="font-semibold mb-2 heading-font">Northeast U.S.</h4>
+          <p class="text-cr-mist text-sm">New England and Mid-Atlantic states with strong RPS mandates, premium REC pricing, and established biomass infrastructure.</p>
+        </div>
+        <div class="bg-white border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-tree text-cr-green-600"></i>
+          </div>
+          <h4 class="font-semibold mb-2 heading-font">Southeast U.S.</h4>
+          <p class="text-cr-mist text-sm">Abundant managed pine plantations, low fuel costs, and growing utility-scale renewable demand across the Southeast power markets.</p>
+        </div>
+        <div class="bg-white border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-mountain text-cr-green-600"></i>
+          </div>
+          <h4 class="font-semibold mb-2 heading-font">Pacific Northwest</h4>
+          <p class="text-cr-mist text-sm">Deep timber resources, forest management needs, and state-level clean energy mandates driving demand for biomass generation.</p>
+        </div>
+        <div class="bg-white border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-globe-americas text-cr-green-600"></i>
+          </div>
+          <h4 class="font-semibold mb-2 heading-font">Eastern Canada</h4>
+          <p class="text-cr-mist text-sm">Vast boreal forests, provincial renewable energy programs, and cross-border grid interconnections with the U.S. Northeast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: WHAT IS CALCULUS ENERGY -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="heading-font text-3xl md:text-4xl font-bold mb-8 text-center">What Is Calculus Energy?</h2>
+      <div class="prose prose max-w-none">
+        <p class="text-cr-charcoal/70 text-base leading-relaxed mb-8">
+          <strong>Calculus Energy</strong> is the renewable energy division of Calculus, a multi-discipline private capital platform headquartered in Boston, Massachusetts. The division develops and acquires renewable energy assets with a primary focus on biomass power plants across North America. Biomass facilities generate baseload, dispatchable, carbon-neutral electricity by combusting sustainably sourced wood fiber, forest residues, and agricultural byproducts. Unlike intermittent renewables such as solar and wind, biomass plants operate at 85-95% capacity factors, producing reliable power 24 hours a day, 365 days a year. Calculus targets facilities backed by long-term power purchase agreements (PPAs) with utilities and corporate offtakers, generating contracted revenue streams plus Renewable Energy Certificate (REC) income. The division also evaluates complementary assets including combined heat and power (CHP) plants, waste-to-energy facilities, biogas projects, and hybrid renewable installations across the Northeastern U.S., Southeastern U.S., Pacific Northwest, and Eastern Canada.
+        </p>
+      </div>
+
+      <!-- GEO: KEY FACTS -->
+      <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 mt-4">
+        <h3 class="heading-font text-xl font-semibold mb-6 text-center">Key Facts About Calculus Energy</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 text-sm">
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Founded</span><span class="text-cr-charcoal font-medium">2020</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Founder &amp; CEO</span><span class="text-cr-charcoal font-medium">Sean Grady</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Headquarters</span><span class="text-cr-charcoal font-medium">Boston, MA</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Primary Focus</span><span class="text-cr-charcoal font-medium">Biomass Power Plants</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Geography</span><span class="text-cr-charcoal font-medium">North America</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Generation Capacity</span><span class="text-cr-charcoal font-medium">250+ MW</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Capacity Factor</span><span class="text-cr-charcoal font-medium">85-95%</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">PPA Terms</span><span class="text-cr-charcoal font-medium">10-25 Years</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Revenue Streams</span><span class="text-cr-charcoal font-medium">PPA + RECs + Capacity</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Fuel Sources</span><span class="text-cr-charcoal font-medium">Wood Fiber, Forest Residues</span></div>
+          <div class="flex justify-between border-b border-cr-border pb-3"><span class="text-cr-mist">Contact</span><span class="text-cr-charcoal font-medium">hello@calculusresearch.io</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: FAQ -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="heading-font text-3xl md:text-4xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+
+        <details class="bg-white border border-cr-border rounded-2xl p-6" open>
+          <summary class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold pr-4">What is biomass energy and why does Calculus focus on it?</h3>
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <p class="text-cr-mist text-sm leading-relaxed mt-4">Biomass energy generates electricity by combusting organic materials such as sustainably sourced wood fiber, forest residues, and agricultural byproducts. Unlike intermittent renewables like solar and wind, biomass plants provide baseload generation &mdash; producing reliable 24/7 power output regardless of weather conditions. Calculus focuses on biomass because it delivers dispatchable, carbon-neutral electricity with established technology, long-term power purchase agreements, and Renewable Energy Certificate revenue streams. Biomass plants also support rural economies through fuel supply chain employment and sustainable forest management.</p>
+        </details>
+
+        <details class="bg-white border border-cr-border rounded-2xl p-6">
+          <summary class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold pr-4">Where does Calculus develop and acquire biomass plants?</h3>
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <p class="text-cr-mist text-sm leading-relaxed mt-4">Calculus targets biomass power plants across North America, with a focus on regions with abundant sustainably managed forest resources and supportive renewable energy policy frameworks. Primary markets include the Northeastern United States, Southeastern United States, Eastern Canada, and the Pacific Northwest. The firm acquires operating facilities, develops greenfield projects, and repositions underperforming assets through operational improvements and fuel supply optimization.</p>
+        </details>
+
+        <details class="bg-white border border-cr-border rounded-2xl p-6">
+          <summary class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold pr-4">How does biomass qualify as renewable energy?</h3>
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <p class="text-cr-mist text-sm leading-relaxed mt-4">Biomass qualifies as renewable energy because the organic feedstocks used for fuel are regrown on a sustainable cycle. When forests are managed responsibly, the carbon released during combustion is reabsorbed by new growth, making the process carbon-neutral over the harvest rotation. Biomass energy is recognized as renewable by the U.S. EPA, most state Renewable Portfolio Standards (RPS), and international frameworks. Biomass plants generate Renewable Energy Certificates (RECs) that utilities and corporations purchase to meet clean energy mandates.</p>
+        </details>
+
+        <details class="bg-white border border-cr-border rounded-2xl p-6">
+          <summary class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold pr-4">What is a Power Purchase Agreement (PPA)?</h3>
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <p class="text-cr-mist text-sm leading-relaxed mt-4">A Power Purchase Agreement is a long-term contract between a power generator and an offtaker &mdash; typically a utility or large corporation &mdash; that guarantees the purchase of electricity at a fixed or escalating price over a defined term, often 10 to 25 years. Biomass plants backed by PPAs provide predictable, contracted revenue streams that support project financing and deliver stable cash yields. Calculus targets biomass assets with existing or re-contractable PPAs to ensure long-term cash flow visibility.</p>
+        </details>
+
+        <details class="bg-white border border-cr-border rounded-2xl p-6">
+          <summary class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold pr-4">Does Calculus invest in renewables beyond biomass?</h3>
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <p class="text-cr-mist text-sm leading-relaxed mt-4">While biomass power plants are the primary focus, Calculus also evaluates complementary renewable energy opportunities including co-generation (combined heat and power), waste-to-energy facilities, biogas and landfill gas projects, and hybrid installations that pair biomass with solar or battery storage. The firm prioritizes assets that generate baseload or dispatchable renewable power with contracted revenue and tangible infrastructure value.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6">Explore a Renewable Energy Opportunity</h2>
+      <p class="text-cr-mist text-lg mb-10">Whether you have an operating biomass facility, a development site, or an energy asset to recapitalize &mdash; we're interested in hearing about it.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-cr-green-900 hover:bg-cr-green-600 px-10 py-4 rounded-2xl font-semibold text-lg transition">Get In Touch</a>
+        <a href="/portfolio/" class="border border-cr-green-900 text-cr-green-600 hover:bg-cr-green-900 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">View Our Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Consulting & Capital Advisory | Fintech, Real Estate & Growth Strategy | Calculus</title>
+  <meta name="description" content="Investor-grade business plans, fintech go-to-market strategy, capital advisory, and real estate development consulting. 50+ business plans delivered, $150M+ capital raised. Boston, MA.">
+  <meta property="og:title" content="Business Consulting & Capital Advisory | Calculus">
+  <meta property="og:description" content="Strategic consulting for capital, growth, and market entry. Business plans, fintech GTM, capital advisory, and real estate development consulting from a team that deploys capital themselves.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.calculusresearch.io/consulting/">
+  <link rel="canonical" href="https://www.calculusresearch.io/consulting/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C',
+            'cr-green-600': '#3E9B5F',
+            'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22',
+            'cr-surface': '#F7F9F8',
+            'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1',
+            'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545',
+            'cr-info': '#2F6FED',
+            'cr-success': '#2E8B57',
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'cr-sm': '0 1px 2px rgba(0,0,0,.06)',
+            'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)',
+            'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(135deg, rgba(28,31,34,0.88), rgba(15,77,44,0.72)), url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in-delay { animation: fadeIn 0.8s ease-out 0.2s both; }
+    .fade-in-delay-2 { animation: fadeIn 0.8s ease-out 0.4s both; }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .chevron { transition: transform 0.3s ease; }
+    details[open] summary .chevron { transform: rotate(180deg); }
+      .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .nav-link.active::after { width: 100%; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "name": "Calculus Consulting",
+        "description": "Business consulting, capital advisory, fintech go-to-market strategy, and real estate development consulting from a team that deploys capital themselves.",
+        "url": "https://www.calculusresearch.io/consulting/",
+        "areaServed": ["Boston", "New England", "United States"],
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Calculus",
+          "url": "https://www.calculusresearch.io"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boston",
+          "addressRegion": "MA",
+          "addressCountry": "US"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Consulting Services",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Business Plan Development", "description": "Investor-grade business plans, pitch decks, financial modeling, and market analysis."},
+            {"@type": "Offer", "name": "Capital Advisory & Fundraising", "description": "Debt and equity capital raise strategy, investor targeting, term sheet negotiation."},
+            {"@type": "Offer", "name": "Fintech & AI Go-to-Market", "description": "Product-market fit validation, GTM strategy, regulatory compliance, partnership strategy."},
+            {"@type": "Offer", "name": "Real Estate Development Consulting", "description": "Pro forma modeling, capital stack structuring, market feasibility studies, entitlement strategy."}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What consulting services does Calculus offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Calculus offers four core consulting services: business plan development (investor-grade business plans, pitch decks, and financial modeling), capital advisory and fundraising (debt and equity raise strategy, investor targeting, and term sheet negotiation), fintech and AI go-to-market strategy (product-market fit validation, GTM roadmaps, and regulatory compliance frameworks), and real estate development consulting (pro forma modeling, capital stack structuring, and market feasibility studies). All consulting is informed by our direct experience as active lenders and investors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does Calculus consulting cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Calculus consulting engagements are custom-scoped based on the client's needs, timeline, and complexity. Pricing is transparent and provided upfront in a detailed proposal after the initial discovery call. Engagements range from focused deliverables like a single business plan or pitch deck to comprehensive multi-month advisory retainers. Contact the team at hello@calculusresearch.io for a custom quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Calculus help with fundraising and investor introductions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Calculus Capital Advisory helps companies raising between $1 million and $50 million in debt or equity. Services include capital raise strategy, investor targeting and warm introductions, term sheet negotiation, deal structuring, and due diligence preparation including data room setup. The Calculus team has helped clients raise over $150 million in total capital across fintech, real estate, and technology verticals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What industries does Calculus Consulting serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Calculus Consulting serves four primary industry verticals: fintech and digital lending, real estate development (hospitality, multifamily, mixed-use), AI and deep technology companies, and traditional small and mid-size businesses seeking growth capital or strategic advisory. The team has delivered over 50 business plans across these verticals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Calculus help with SBA loan applications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Calculus Consulting assists clients with SBA loan preparation, including business plan development, financial projections, and documentation required for SBA 7(a) and 504 loan applications. While Calculus does not originate SBA loans directly, the consulting team ensures that all materials are lender-ready and positioned to meet SBA underwriting requirements."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link active text-cr-green-900 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-green-900 font-medium hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg py-28 fade-in">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <div class="inline-block bg-white/10 border border-white/20 text-white/80 text-sm font-medium px-6 py-2 rounded-full mb-8">
+        Calculus Consulting
+      </div>
+      <h1 class="heading-font text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
+        Strategic Consulting for<br>Capital, Growth &amp; Market Entry
+      </h1>
+      <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/80 leading-relaxed mb-10">
+        Investor-grade business plans, fintech go-to-market strategy, capital advisory, and operational consulting from a team that deploys capital themselves.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-cr-green-900 hover:bg-cr-green-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">Book a Discovery Call</a>
+        <a href="#services" class="border border-white/40 text-white hover:bg-white/10 px-10 py-4 rounded-2xl font-semibold text-lg transition">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="bg-cr-surface py-10 border-y border-cr-border">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="heading-font text-3xl md:text-4xl font-bold text-cr-green-600">50+</div>
+          <div class="text-cr-mist text-sm mt-1">Business Plans Delivered</div>
+        </div>
+        <div>
+          <div class="heading-font text-3xl md:text-4xl font-bold text-cr-green-600">$150M+</div>
+          <div class="text-cr-mist text-sm mt-1">Capital Raised for Clients</div>
+        </div>
+        <div>
+          <div class="heading-font text-3xl md:text-4xl font-bold text-cr-green-600">4</div>
+          <div class="text-cr-mist text-sm mt-1">Industry Verticals</div>
+        </div>
+        <div>
+          <div class="heading-font text-3xl md:text-4xl font-bold text-cr-green-600">Boston, MA</div>
+          <div class="text-cr-mist text-sm mt-1">Headquarters</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Our Services</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">What We Do</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">Four core consulting verticals &mdash; each informed by our direct experience as active lenders and investors.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Service 1: Business Plan Development -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-file-lines text-cr-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 heading-font">Business Plan Development</h3>
+          <p class="text-cr-mist mb-5 leading-relaxed">Investor-grade business plans and pitch decks designed to close capital and tell your story with precision.</p>
+          <ul class="space-y-3 text-cr-mist text-sm mb-6">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Investor-grade business plans &amp; pitch decks
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Financial modeling (5-year pro forma, revenue projections, unit economics)
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Market analysis &amp; competitive positioning
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Executive summary, operational plan, exit strategy
+            </li>
+          </ul>
+          <div class="text-xs text-cr-green-600 font-medium uppercase tracking-widest">For: Startups, growth-stage companies, PE-backed businesses</div>
+        </div>
+
+        <!-- Service 2: Capital Advisory & Fundraising -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-hand-holding-dollar text-cr-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 heading-font">Capital Advisory &amp; Fundraising</h3>
+          <p class="text-cr-mist mb-5 leading-relaxed">End-to-end fundraising support from strategy through close, backed by real capital markets experience.</p>
+          <ul class="space-y-3 text-cr-mist text-sm mb-6">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Debt &amp; equity capital raise strategy
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Investor targeting &amp; introduction
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Term sheet negotiation &amp; deal structuring
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Due diligence preparation &amp; data room setup
+            </li>
+          </ul>
+          <div class="text-xs text-cr-green-600 font-medium uppercase tracking-widest">For: Companies raising $1M&ndash;$50M in debt or equity</div>
+        </div>
+
+        <!-- Service 3: Fintech & AI Go-to-Market -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-rocket text-cr-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 heading-font">Fintech &amp; AI Go-to-Market</h3>
+          <p class="text-cr-mist mb-5 leading-relaxed">Launch strategy for fintech and AI companies navigating regulated markets, built by operators who have done it.</p>
+          <ul class="space-y-3 text-cr-mist text-sm mb-6">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Product-market fit validation
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              GTM strategy &amp; launch roadmap
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Regulatory &amp; compliance framework (state licensing, federal oversight)
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Partnership &amp; distribution channel strategy
+            </li>
+          </ul>
+          <div class="text-xs text-cr-green-600 font-medium uppercase tracking-widest">For: Fintech startups, AI companies, digital lending platforms</div>
+        </div>
+
+        <!-- Service 4: Real Estate Development Consulting -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-hard-hat text-cr-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 heading-font">Real Estate Development Consulting</h3>
+          <p class="text-cr-mist mb-5 leading-relaxed">Financial modeling and advisory for developers, sponsors, and owner-operators across all asset classes.</p>
+          <ul class="space-y-3 text-cr-mist text-sm mb-6">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Pro forma modeling (NOI, cap rate, IRR, DSCR projections)
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Capital stack structuring (senior debt, mezzanine, preferred equity)
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Market feasibility studies (hospitality, multifamily, mixed-use)
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-cr-green-600 mt-0.5 text-xs"></i>
+              Entitlement &amp; zoning strategy support
+            </li>
+          </ul>
+          <div class="text-xs text-cr-green-600 font-medium uppercase tracking-widest">For: Developers, sponsors, and owner-operators</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS: HOW WE WORK -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Our Process</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">How We Work</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">A structured, transparent engagement process from first call to capital-ready deliverables.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="bg-white rounded-2xl p-8 border border-cr-border h-full">
+            <div class="w-12 h-12 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-lg font-bold heading-font text-cr-green-600 mb-5">01</div>
+            <h3 class="text-lg font-semibold mb-3 heading-font">Discovery Call</h3>
+            <p class="text-cr-mist text-sm leading-relaxed">Understand your goals, timeline, challenges, and capital requirements. We listen before we scope.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative">
+          <div class="bg-white rounded-2xl p-8 border border-cr-border h-full">
+            <div class="w-12 h-12 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-lg font-bold heading-font text-cr-green-600 mb-5">02</div>
+            <h3 class="text-lg font-semibold mb-3 heading-font">Scope &amp; Proposal</h3>
+            <p class="text-cr-mist text-sm leading-relaxed">Custom engagement structure with transparent pricing, clear milestones, and defined deliverables.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="relative">
+          <div class="bg-white rounded-2xl p-8 border border-cr-border h-full">
+            <div class="w-12 h-12 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-lg font-bold heading-font text-cr-green-600 mb-5">03</div>
+            <h3 class="text-lg font-semibold mb-3 heading-font">Execute &amp; Deliver</h3>
+            <p class="text-cr-mist text-sm leading-relaxed">Dedicated team assigned to your engagement with weekly touchpoints and iterative feedback loops.</p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="relative">
+          <div class="bg-white rounded-2xl p-8 border border-cr-border h-full">
+            <div class="w-12 h-12 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-lg font-bold heading-font text-cr-green-600 mb-5">04</div>
+            <h3 class="text-lg font-semibold mb-3 heading-font">Capital-Ready</h3>
+            <p class="text-cr-mist text-sm leading-relaxed">Final deliverables positioned and stress-tested for investor, lender, and board-level review.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CALCULUS CONSULTING -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Our Advantage</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">Why Calculus Consulting</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">We are not just consultants &mdash; we are operators, lenders, and investors who bring real capital markets experience to every engagement.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- We Deploy Capital -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-coins text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">We Deploy Capital</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Unlike pure consultants, we actively lend and invest, so we know exactly what investors and lenders look for. Our consulting is grounded in real underwriting, not theory.</p>
+        </div>
+        <!-- AI-Enhanced Analysis -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-brain text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">AI-Enhanced Analysis</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Our UnderwriteAI and MarketPulse tools inform our consulting with real-time market intelligence, giving your business plan and strategy a data-driven edge.</p>
+        </div>
+        <!-- End-to-End Platform -->
+        <div class="bg-cr-surface rounded-2xl p-8 card-hover border border-cr-border">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-layer-group text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">End-to-End Platform</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">From business plan to capital raise to loan closing, everything happens under one roof. No handoffs, no fragmented advisory &mdash; one team, one platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: WHAT IS CALCULUS CONSULTING -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Overview</div>
+        <h2 class="heading-font text-3xl md:text-4xl font-bold">What Is Calculus Consulting?</h2>
+      </div>
+      <p class="text-cr-charcoal/70 text-base leading-relaxed mb-10">Calculus Consulting is the strategic advisory division of Calculus, a multi-discipline finance and technology platform headquartered in Boston, Massachusetts. The consulting practice delivers investor-grade business plans, capital advisory, fintech go-to-market strategy, and real estate development consulting to startups, growth-stage companies, developers, and institutional sponsors. Unlike traditional consulting firms, Calculus Consulting is backed by an active lending and investment platform, meaning every engagement is informed by real capital deployment experience across fintech, real estate, and AI verticals.</p>
+      <div class="bg-white border border-cr-border rounded-2xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-cr-border">
+          <h3 class="heading-font text-lg font-bold text-cr-green-600">Key Facts</h3>
+        </div>
+        <table class="w-full text-sm">
+          <tbody>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium w-1/3">Parent Organization</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">Calculus (calculusresearch.io)</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Headquarters</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">Boston, Massachusetts</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Founded</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">2020</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Services Offered</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">Business plan development, capital advisory, fintech GTM, real estate consulting</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Industries</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">Fintech, real estate, AI / deep tech, SMB</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Typical Engagement</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">2&ndash;12 weeks depending on scope and complexity</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Business Plans Delivered</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">50+</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Capital Raised</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">$150M+ for clients across all verticals</td>
+            </tr>
+            <tr class="border-b border-cr-border">
+              <td class="px-6 py-3 text-cr-mist font-medium">Team Location</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">Boston, MA &middot; Windsor, CT</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-cr-mist font-medium">Contact</td>
+              <td class="px-6 py-3 text-cr-charcoal/70">hello@calculusresearch.io</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">FAQ</div>
+        <h2 class="heading-font text-3xl md:text-4xl font-bold">Consulting Questions</h2>
+      </div>
+      <div class="space-y-4">
+
+        <details class="bg-cr-surface border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            What consulting services does Calculus offer?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Calculus offers four core consulting services: business plan development (investor-grade business plans, pitch decks, and financial modeling), capital advisory and fundraising (debt and equity raise strategy, investor targeting, and term sheet negotiation), fintech and AI go-to-market strategy (product-market fit validation, GTM roadmaps, and regulatory compliance frameworks), and real estate development consulting (pro forma modeling, capital stack structuring, and market feasibility studies). All consulting is informed by our direct experience as active lenders and investors.
+          </div>
+        </details>
+
+        <details class="bg-cr-surface border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            How much does Calculus consulting cost?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Calculus consulting engagements are custom-scoped based on the client's needs, timeline, and complexity. Pricing is transparent and provided upfront in a detailed proposal after the initial discovery call. Engagements range from focused deliverables like a single business plan or pitch deck to comprehensive multi-month advisory retainers. Contact the team at hello@calculusresearch.io for a custom quote.
+          </div>
+        </details>
+
+        <details class="bg-cr-surface border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            Does Calculus help with fundraising and investor introductions?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Yes. Calculus Capital Advisory helps companies raising between $1 million and $50 million in debt or equity. Services include capital raise strategy, investor targeting and warm introductions, term sheet negotiation, deal structuring, and due diligence preparation including data room setup. The Calculus team has helped clients raise over $150 million in total capital across fintech, real estate, and technology verticals.
+          </div>
+        </details>
+
+        <details class="bg-cr-surface border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            What industries does Calculus Consulting serve?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Calculus Consulting serves four primary industry verticals: fintech and digital lending, real estate development (hospitality, multifamily, mixed-use), AI and deep technology companies, and traditional small and mid-size businesses seeking growth capital or strategic advisory. The team has delivered over 50 business plans across these verticals.
+          </div>
+        </details>
+
+        <details class="bg-cr-surface border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            Can Calculus help with SBA loan applications?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Yes. Calculus Consulting assists clients with SBA loan preparation, including business plan development, financial projections, and documentation required for SBA 7(a) and 504 loan applications. While Calculus does not originate SBA loans directly, the consulting team ensures that all materials are lender-ready and positioned to meet SBA underwriting requirements.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6">Let's Build Your Strategy</h2>
+      <p class="text-cr-mist text-lg mb-10">Whether you need an investor-grade business plan, a capital raise strategy, or a fintech go-to-market roadmap &mdash; our team is ready to build it with you.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-600 px-10 py-4 rounded-2xl font-semibold text-lg transition">Book a Discovery Call</a>
+        <a href="/lending/" class="border border-cr-green-900 text-cr-green-600 hover:bg-cr-green-900 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">Explore Lending</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 text-sm text-cr-mist mt-6">
+        <span>50+ Business Plans</span><span>&middot;</span>
+        <span>$150M+ Capital Raised</span><span>&middot;</span>
+        <span>4 Industry Verticals</span><span>&middot;</span>
+        <span>Est. 2020</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

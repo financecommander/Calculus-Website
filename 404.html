@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Calculus</title>
+  <meta name="description" content="The page you are looking for could not be found. Return to the Calculus homepage or contact us for assistance.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C', 'cr-green-600': '#3E9B5F', 'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22', 'cr-surface': '#F7F9F8', 'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1', 'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545', 'cr-info': '#2F6FED', 'cr-success': '#2E8B57',
+          },
+          fontFamily: { heading: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+          boxShadow: { 'cr-sm': '0 1px 2px rgba(0,0,0,.06)', 'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)', 'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)' },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(135deg, rgba(28,31,34,0.88), rgba(15,77,44,0.72));
+      background-size: cover;
+      background-position: center;
+    }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active::after { width: 100%; }
+    .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 404 CONTENT -->
+  <section class="min-h-[70vh] flex items-center justify-center fade-in">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <div class="heading-font text-[10rem] sm:text-[12rem] font-bold leading-none text-cr-green-900/20 select-none">404</div>
+      <h1 class="heading-font text-4xl md:text-5xl font-bold -mt-10 mb-4 text-cr-charcoal">Page Not Found</h1>
+      <p class="text-cr-mist text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+        The page you are looking for does not exist or has been moved. Please navigate back to the homepage or reach out to our team if you need assistance.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-8 py-3.5 rounded-[14px] font-semibold transition text-base">Back to Home</a>
+        <a href="/lending/" class="border border-cr-border hover:border-cr-green-900 hover:text-cr-green-900 px-8 py-3.5 rounded-[14px] font-semibold transition text-base">View Lending</a>
+        <a href="/contact/" class="border border-cr-border hover:border-cr-green-900 hover:text-cr-green-900 px-8 py-3.5 rounded-[14px] font-semibold transition text-base">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private AI Networks — Calculus Portfolio</title>
+  <meta name="description" content="Private AI Networks: secure private AI deployment for organizations with sensitive data. On-premise inference, federated learning, and encrypted computation where no data leaves your environment.">
+  <meta property="og:title" content="Private AI Networks — Calculus AI Labs Portfolio">
+  <meta property="og:description" content="Secure private AI deployment for organizations with sensitive data. On-premise inference, federated learning, and encrypted computation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.calculusresearch.io/private-ai-networks/">
+  <link rel="canonical" href="https://www.calculusresearch.io/private-ai-networks/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is private AI deployment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Private AI deployment is the practice of running artificial intelligence models entirely on-premise within an organization's own infrastructure, so that no sensitive data ever leaves the client environment. This approach enables organizations to leverage AI capabilities without exposing proprietary or regulated data to third-party cloud providers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is federated learning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Federated learning is a machine learning technique that trains AI models across multiple decentralized devices or organizations without sharing raw data. Only model updates (gradients) are exchanged — not the underlying data — enabling collaborative AI improvement while preserving data privacy and regulatory compliance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who uses Private AI Networks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Private AI Networks serves financial institutions, healthcare systems, government agencies, and defense contractors — organizations that handle sensitive, classified, or regulated data and require AI capabilities without any risk of data exposure to external systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Private AI Networks part of Calculus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Private AI Networks was incubated through Calculus AI Labs, Calculus's AI research and deep-technology division headquartered in Boston, MA. Calculus AI Labs develops breakthrough technologies in AI deployment, quantum computing, and cybersecurity."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Private AI Networks",
+    "description": "Secure, private AI infrastructure enabling on-premise deployment of large language models for financial institutions with data sovereignty requirements.",
+    "url": "https://www.calculusresearch.io/private-ai-networks/",
+    "parentOrganization": {"@type": "Organization", "name": "Calculus", "url": "https://www.calculusresearch.io"}
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C', 'cr-green-600': '#3E9B5F', 'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22', 'cr-surface': '#F7F9F8', 'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1', 'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545', 'cr-info': '#2F6FED', 'cr-success': '#2E8B57',
+          },
+          fontFamily: { heading: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+          boxShadow: { 'cr-sm': '0 1px 2px rgba(0,0,0,.06)', 'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)', 'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)' },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active::after { width: 100%; }
+    .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .chevron { transition: transform 0.3s ease; }
+    details[open] summary .chevron { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link active text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-green-900 font-medium cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <section class="py-6 bg-white border-b border-cr-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center gap-3 text-sm text-cr-mist">
+        <a href="/portfolio/" class="hover:text-cr-green-600 transition">Portfolio</a>
+        <i class="fas fa-chevron-right text-xs text-cr-mist"></i>
+        <span class="text-cr-charcoal">Private AI Networks</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section class="py-20 bg-white fade-in">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="inline-block bg-cr-surface2 border border-cr-green-900/20 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-6">
+        Labs Portfolio
+      </div>
+      <div class="flex items-center gap-5 mb-8">
+        <div class="w-16 h-16 bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl">
+          <i class="fas fa-lock text-cr-green-600"></i>
+        </div>
+        <h1 class="heading-font text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+          Private AI<br>Networks
+        </h1>
+      </div>
+      <p class="text-lg md:text-xl text-cr-charcoal/70 leading-relaxed max-w-3xl">
+        Secure private AI deployment for organizations handling sensitive data. On-premise and private cloud inference where no data ever leaves the client environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="heading-font text-3xl md:text-4xl font-bold mb-6">AI Without Compromise</h2>
+          <p class="text-cr-charcoal/70 leading-relaxed mb-6">
+            Organizations in healthcare, legal, financial services, and government need the power of frontier AI models &mdash; but cannot risk sending sensitive data to third-party cloud providers. Regulatory requirements, competitive intelligence, and patient confidentiality demand that data stays in-house.
+          </p>
+          <p class="text-cr-charcoal/70 leading-relaxed">
+            Private AI Networks delivers enterprise-grade AI inference entirely within the client's own infrastructure. Our platform combines on-premise deployment with advanced privacy-preserving techniques, giving organizations full AI capability with zero data exposure.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-white rounded-2xl p-6 border border-cr-border">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center">
+                <i class="fas fa-server text-cr-green-600"></i>
+              </div>
+              <h3 class="text-lg font-semibold">On-Premise Deployment</h3>
+            </div>
+            <p class="text-cr-mist text-sm leading-relaxed">Full AI model deployment within your own data centers or private cloud environment. No external API calls, no data in transit to third parties.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-cr-border">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center">
+                <i class="fas fa-diagram-project text-cr-green-600"></i>
+              </div>
+              <h3 class="text-lg font-semibold">Federated Learning</h3>
+            </div>
+            <p class="text-cr-mist text-sm leading-relaxed">Train and improve AI models across multiple organizations or departments without ever centralizing or sharing raw data. Models travel to the data, not the other way around.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-cr-border">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center">
+                <i class="fas fa-mask text-cr-green-600"></i>
+              </div>
+              <h3 class="text-lg font-semibold">Differential Privacy</h3>
+            </div>
+            <p class="text-cr-mist text-sm leading-relaxed">Mathematical guarantees that individual data points cannot be reverse-engineered from model outputs, ensuring privacy even in aggregated analytics.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-cr-border">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center">
+                <i class="fas fa-file-shield text-cr-green-600"></i>
+              </div>
+              <h3 class="text-lg font-semibold">Encrypted Inference</h3>
+            </div>
+            <p class="text-cr-mist text-sm leading-relaxed">Homomorphic encryption techniques that allow AI models to process data while it remains fully encrypted, adding an additional layer of protection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATIONS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Applications</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">Who We Serve</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-2xl mb-5">
+            <i class="fas fa-hospital text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">Healthcare</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">HIPAA-compliant AI for diagnostics, clinical decision support, and patient data analysis without cloud exposure.</p>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-2xl mb-5">
+            <i class="fas fa-gavel text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">Legal</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Privileged document review, contract analysis, and legal research with attorney-client privilege fully preserved.</p>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-2xl mb-5">
+            <i class="fas fa-chart-line text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">Financial Services</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Proprietary trading strategies, risk modeling, and client analytics with zero data leakage to external systems.</p>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-14 h-14 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-2xl mb-5">
+            <i class="fas fa-landmark text-cr-green-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">Government</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Classified intelligence analysis, secure communications processing, and citizen data protection for public sector agencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY METRICS -->
+  <section class="py-16 bg-cr-surface border-y border-cr-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="heading-font text-3xl md:text-4xl font-bold">Key Metrics</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">0%</div>
+          <div class="text-cr-mist mt-2 text-sm">Data Leaving Client Environment</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">99.9%</div>
+          <div class="text-cr-mist mt-2 text-sm">Uptime SLA</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">SOC 2</div>
+          <div class="text-cr-mist mt-2 text-sm">Compliance Ready</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">&lt;50ms</div>
+          <div class="text-cr-mist mt-2 text-sm">Local Inference Latency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: WHAT IS PRIVATE AI NETWORKS? -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Overview</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">What Is Private AI Networks?</h2>
+      </div>
+      <p class="text-cr-charcoal/70 text-lg leading-relaxed max-w-4xl mx-auto">
+        Private AI Networks is a secure AI deployment company incubated through Calculus AI Labs, enabling organizations to run artificial intelligence models entirely within their own infrastructure. Using federated learning, differential privacy, and on-premise inference architecture, Private AI Networks ensures that no sensitive data ever leaves the client environment. The platform serves financial institutions, healthcare systems, government agencies, and defense contractors that require AI capabilities without data exposure risks. Based in Boston, Massachusetts.
+      </p>
+    </div>
+  </section>
+
+  <!-- GEO: KEY FACTS -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="heading-font text-3xl md:text-4xl font-bold">Key Facts</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <tbody class="divide-y divide-cr-border">
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Parent Organization</td>
+              <td class="py-4 text-cr-charcoal text-sm">Calculus AI Labs</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Headquarters</td>
+              <td class="py-4 text-cr-charcoal text-sm">Boston, MA</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Core Technology</td>
+              <td class="py-4 text-cr-charcoal text-sm">Private AI Deployment</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Privacy Methods</td>
+              <td class="py-4 text-cr-charcoal text-sm">Federated Learning, Differential Privacy</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Deployment</td>
+              <td class="py-4 text-cr-charcoal text-sm">On-Premise Inference</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Data Policy</td>
+              <td class="py-4 text-cr-charcoal text-sm">Zero data leaves client environment</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Target Sectors</td>
+              <td class="py-4 text-cr-charcoal text-sm">Finance, Healthcare, Government, Defense</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-cr-mist font-medium text-sm whitespace-nowrap">Compliance</td>
+              <td class="py-4 text-cr-charcoal text-sm">HIPAA, SOC 2, FedRAMP compatible</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">FAQ</div>
+        <h2 class="heading-font text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-4">
+        <details class="bg-white border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            What is private AI deployment?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Private AI deployment is the practice of running artificial intelligence models entirely on-premise within an organization's own infrastructure, so that no sensitive data ever leaves the client environment. This approach enables organizations to leverage AI capabilities without exposing proprietary or regulated data to third-party cloud providers.
+          </div>
+        </details>
+        <details class="bg-white border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            What is federated learning?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Federated learning is a machine learning technique that trains AI models across multiple decentralized devices or organizations without sharing raw data. Only model updates (gradients) are exchanged &mdash; not the underlying data &mdash; enabling collaborative AI improvement while preserving data privacy and regulatory compliance.
+          </div>
+        </details>
+        <details class="bg-white border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            Who uses Private AI Networks?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Private AI Networks serves financial institutions, healthcare systems, government agencies, and defense contractors &mdash; organizations that handle sensitive, classified, or regulated data and require AI capabilities without any risk of data exposure to external systems.
+          </div>
+        </details>
+        <details class="bg-white border border-cr-border rounded-2xl">
+          <summary class="flex items-center justify-between p-6 font-semibold cursor-pointer">
+            Is Private AI Networks part of Calculus?
+            <i class="fas fa-chevron-down text-cr-green-600 text-sm chevron"></i>
+          </summary>
+          <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+            Yes, Private AI Networks was incubated through Calculus AI Labs, Calculus's AI research and deep-technology division headquartered in Boston, MA. Calculus AI Labs develops breakthrough technologies in AI deployment, quantum computing, and cybersecurity.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK + CTA -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <a href="/portfolio/" class="inline-flex items-center gap-2 text-cr-mist hover:text-cr-green-600 transition text-sm mb-10">
+        <i class="fas fa-arrow-left text-xs"></i> Back to Portfolio
+      </a>
+      <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6">Interested in Private AI Networks?</h2>
+      <p class="text-cr-mist text-lg mb-10">If your organization needs the power of AI without the risk of data exposure, we should talk. Available for enterprise deployment, licensing, and strategic investment.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-cr-green-900 hover:bg-cr-green-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">Get In Touch</a>
+        <a href="/labs/" class="border border-cr-green-900 text-cr-green-600 hover:bg-cr-green-900 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">Explore Labs</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

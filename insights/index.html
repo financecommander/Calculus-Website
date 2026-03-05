@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights | Private Credit, AI & Fintech Research — Calculus</title>
+  <meta name="description" content="Original research, market analysis, and investment insights from Calculus. Covering private credit, AI-driven underwriting, hospitality finance, and fintech innovation.">
+  <meta property="og:title" content="Insights — Calculus">
+  <meta property="og:description" content="Thought leadership on private credit, AI, and institutional finance from the Calculus platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.calculusresearch.io/insights/">
+  <link rel="canonical" href="https://www.calculusresearch.io/insights/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C',
+            'cr-green-600': '#3E9B5F',
+            'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22',
+            'cr-surface': '#F7F9F8',
+            'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1',
+            'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545',
+            'cr-info': '#2F6FED',
+            'cr-success': '#2E8B57',
+          },
+          fontFamily: { heading: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+          boxShadow: { 'cr-sm': '0 1px 2px rgba(0,0,0,.06)', 'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)', 'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)' },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(135deg, rgba(28,31,34,0.88), rgba(15,77,44,0.72)), url('https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active::after { width: 100%; }
+    .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+  </style>
+  <!-- Schema.org: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Calculus Insights",
+    "description": "Market research, AI analysis, lending trends, and real estate intelligence from Calculus — a multi-discipline finance platform headquartered in Boston, MA.",
+    "url": "https://www.calculusresearch.io/insights/",
+    "publisher": {"@type": "Organization", "name": "Calculus", "url": "https://www.calculusresearch.io"},
+    "about": ["Private Credit", "AI in Finance", "Real Estate Markets", "Lending Trends", "Fintech Research"]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Calculus Insights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculus Insights is the research and thought leadership hub of Calculus, covering private credit markets, AI in financial services, real estate development trends, energy finance, and fintech innovation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who writes Calculus Insights content?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research is produced by the Calculus team led by founder Sean Grady, drawing on expertise across lending, AI, real estate, and institutional finance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What topics does Calculus Insights cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Coverage spans bridge loan market analysis, DSCR lending trends, SBA program updates, AI underwriting advances, real estate development intelligence, energy project finance, and portfolio company updates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often is Calculus Insights updated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New research and market analysis published on a regular basis covering timely market developments and emerging trends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I subscribe to Calculus Insights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact hello@calculusresearch.io to join the distribution list for new research publications and market commentary."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg py-32 md:py-40">
+    <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+      <div class="inline-block bg-cr-surface2 border border-cr-border text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-8">
+        Thought Leadership
+      </div>
+      <h1 class="heading-font text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-white">
+        Insights
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/80 leading-relaxed">
+        Original research, market analysis, and investment insights from the Calculus platform. Covering private credit, AI-driven underwriting, hospitality finance, and fintech innovation.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Latest</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold text-cr-charcoal">Featured Articles</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">Deep dives into the trends shaping private credit, alternative lending, and fintech innovation.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Article 1 — Featured Large -->
+        <a href="#" class="group bg-cr-surface border border-cr-border rounded-2xl overflow-hidden card-hover block md:row-span-2">
+          <div class="h-64 md:h-80 bg-gradient-to-br from-cr-green-900/40 to-cr-surface2 flex items-center justify-center">
+            <div class="text-center px-8">
+              <i class="fas fa-brain text-cr-green-600 text-5xl mb-4"></i>
+              <p class="text-cr-mist text-sm">Featured Image Placeholder</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="bg-cr-surface2 text-cr-green-600 text-xs font-semibold px-3 py-1 rounded-full">AI &amp; Credit</span>
+              <span class="text-cr-mist text-xs">February 15, 2026</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 heading-font group-hover:text-cr-green-900 transition text-cr-charcoal">The Future of AI-Driven Underwriting in Private Credit</h3>
+            <p class="text-cr-mist leading-relaxed mb-6">How machine learning models are transforming the way private credit firms evaluate risk, price loans, and allocate capital. We explore the shift from traditional FICO-based assessments to multi-dimensional AI scoring that captures borrower potential legacy systems miss.</p>
+            <span class="text-cr-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all text-sm">Read Article <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="#" class="group bg-cr-surface border border-cr-border rounded-2xl overflow-hidden card-hover block">
+          <div class="h-48 bg-gradient-to-br from-blue-900/30 to-cr-surface2 flex items-center justify-center">
+            <div class="text-center px-8">
+              <i class="fas fa-globe text-cr-green-600 text-4xl mb-3"></i>
+              <p class="text-cr-mist text-sm">Image Placeholder</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-cr-surface2 text-cr-green-600 text-xs font-semibold px-3 py-1 rounded-full">Financial Inclusion</span>
+              <span class="text-cr-mist text-xs">January 28, 2026</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 heading-font group-hover:text-cr-green-900 transition text-cr-charcoal">How Alternative Data is Banking the Unbanked</h3>
+            <p class="text-cr-mist text-sm leading-relaxed mb-4">Exploring how non-traditional data sources &mdash; from mobile usage patterns to utility payments &mdash; are creating new pathways to credit for the 1.4 billion adults without a bank account.</p>
+            <span class="text-cr-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all text-sm">Read Article <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="#" class="group bg-cr-surface border border-cr-border rounded-2xl overflow-hidden card-hover block">
+          <div class="h-48 bg-gradient-to-br from-amber-900/30 to-cr-surface2 flex items-center justify-center">
+            <div class="text-center px-8">
+              <i class="fas fa-hotel text-cr-green-600 text-4xl mb-3"></i>
+              <p class="text-cr-mist text-sm">Image Placeholder</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-cr-surface2 text-cr-green-600 text-xs font-semibold px-3 py-1 rounded-full">Hospitality</span>
+              <span class="text-cr-mist text-xs">January 10, 2026</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 heading-font group-hover:text-cr-green-900 transition text-cr-charcoal">Hospitality Sector Outlook 2026: Recovery &amp; Opportunity</h3>
+            <p class="text-cr-mist text-sm leading-relaxed mb-4">An in-depth look at the hospitality sector's continued recovery, emerging opportunities in boutique hotels and short-term rentals, and how bridge lending is fueling the next wave of acquisitions.</p>
+            <span class="text-cr-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all text-sm">Read Article <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Article 4 — Full Width -->
+      <a href="#" class="group bg-cr-surface border border-cr-border rounded-2xl overflow-hidden card-hover block mt-8">
+        <div class="grid md:grid-cols-3">
+          <div class="h-48 md:h-auto bg-gradient-to-br from-purple-900/30 to-cr-surface2 flex items-center justify-center">
+            <div class="text-center px-8 py-8">
+              <i class="fas fa-hand-holding-dollar text-cr-green-600 text-4xl mb-3"></i>
+              <p class="text-cr-mist text-sm">Image Placeholder</p>
+            </div>
+          </div>
+          <div class="p-8 md:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="bg-cr-surface2 text-cr-green-600 text-xs font-semibold px-3 py-1 rounded-full">Private Credit</span>
+              <span class="text-cr-mist text-xs">December 18, 2025</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 heading-font group-hover:text-cr-green-900 transition text-cr-charcoal">The Rise of Private Credit: Why Institutional Allocators Are Shifting Capital</h3>
+            <p class="text-cr-mist leading-relaxed mb-4">As traditional bank lending contracts and spreads widen, private credit is emerging as a preferred asset class for institutional portfolios. We examine how direct lending, bridge financing, and structured credit are reshaping capital allocation for family offices and endowments.</p>
+            <span class="text-cr-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all text-sm">Read Article <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="py-16 bg-cr-surface border-y border-cr-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h3 class="heading-font text-2xl font-bold text-cr-charcoal">Browse by Topic</h3>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="bg-white border border-cr-border hover:border-cr-green-900/50 text-cr-mist hover:text-cr-green-900 px-6 py-3 rounded-2xl text-sm font-medium transition">
+          <i class="fas fa-chart-line mr-2"></i>Private Credit
+        </a>
+        <a href="#" class="bg-white border border-cr-border hover:border-cr-green-900/50 text-cr-mist hover:text-cr-green-900 px-6 py-3 rounded-2xl text-sm font-medium transition">
+          <i class="fas fa-microchip mr-2"></i>AI &amp; Machine Learning
+        </a>
+        <a href="#" class="bg-white border border-cr-border hover:border-cr-green-900/50 text-cr-mist hover:text-cr-green-900 px-6 py-3 rounded-2xl text-sm font-medium transition">
+          <i class="fas fa-hotel mr-2"></i>Hospitality
+        </a>
+        <a href="#" class="bg-white border border-cr-border hover:border-cr-green-900/50 text-cr-mist hover:text-cr-green-900 px-6 py-3 rounded-2xl text-sm font-medium transition">
+          <i class="fas fa-building mr-2"></i>Multifamily
+        </a>
+        <a href="#" class="bg-white border border-cr-border hover:border-cr-green-900/50 text-cr-mist hover:text-cr-green-900 px-6 py-3 rounded-2xl text-sm font-medium transition">
+          <i class="fas fa-landmark mr-2"></i>Development Finance
+        </a>
+        <a href="#" class="bg-white border border-cr-border hover:border-cr-green-900/50 text-cr-mist hover:text-cr-green-900 px-6 py-3 rounded-2xl text-sm font-medium transition">
+          <i class="fas fa-globe mr-2"></i>Financial Inclusion
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-cr-surface border border-cr-border rounded-2xl p-10 md:p-14 text-center">
+        <div class="w-16 h-16 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-6">
+          <i class="fas fa-envelope text-cr-green-600"></i>
+        </div>
+        <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-cr-charcoal">Subscribe to Our Newsletter</h2>
+        <p class="text-cr-mist mb-8 max-w-lg mx-auto">Get our latest research notes, market analysis, and thought leadership delivered to your inbox. No spam &mdash; just signal.</p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon!');">
+          <input type="email" placeholder="your@email.com" required class="flex-1 bg-white border border-cr-border focus:border-cr-green-900 text-cr-charcoal px-5 py-3.5 rounded-[14px] outline-none transition placeholder:text-cr-mist text-sm">
+          <button type="submit" class="bg-cr-green-900 hover:bg-cr-green-900/90 text-white px-8 py-3.5 rounded-[14px] font-semibold transition text-sm whitespace-nowrap">Subscribe</button>
+        </form>
+        <p class="text-cr-mist text-xs mt-4">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMING SOON NOTE -->
+  <section class="py-16 bg-cr-surface border-t border-cr-border">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="inline-block bg-cr-surface2 border border-cr-border text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-6">
+        <i class="fas fa-clock mr-2"></i>More Content Coming Soon
+      </div>
+      <h3 class="heading-font text-2xl font-bold mb-4 text-cr-charcoal">We're Building Our Library</h3>
+      <p class="text-cr-mist max-w-xl mx-auto mb-8">Our research team is actively developing in-depth analysis, case studies, and market reports. Check back regularly or subscribe above to be the first to read new content.</p>
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-cr-mist">
+        <div class="flex items-center gap-2"><i class="fas fa-file-lines text-cr-green-900"></i> Market Reports</div>
+        <div class="flex items-center gap-2"><i class="fas fa-flask text-cr-green-900"></i> Research Notes</div>
+        <div class="flex items-center gap-2"><i class="fas fa-podcast text-cr-green-900"></i> Case Studies</div>
+        <div class="flex items-center gap-2"><i class="fas fa-video text-cr-green-900"></i> Video Analysis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6 text-cr-charcoal">Have a Topic in Mind?</h2>
+      <p class="text-cr-mist text-lg mb-10">We welcome suggestions for research topics and analysis. Reach out and let us know what questions you want answered.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-cr-green-900 hover:bg-cr-green-900/90 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">Get In Touch</a>
+        <a href="/about/" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-10 py-4 rounded-2xl font-semibold text-lg transition">About Calculus</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: INSIGHTS -->
+  <section class="py-20 bg-cr-surface border-t border-cr-border">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="heading-font text-2xl font-bold mb-6 text-cr-charcoal">About Calculus Insights</h2>
+      <div class="text-cr-charcoal/70 space-y-4 leading-relaxed">
+        <p>Calculus Insights is the research and thought leadership division of Calculus, a multi-discipline finance platform headquartered in Boston, Massachusetts. The Insights hub publishes original market research, data-driven analysis, and commentary across the firm's core verticals: private credit and bridge lending, DSCR and SBA loan markets, real estate development, energy project finance, and artificial intelligence in financial services.</p>
+        <p>Research is produced by the Calculus team, drawing on proprietary data from the firm's direct lending operations, AI Labs product development, and portfolio company performance. Topics include bridge loan market sizing, cap rate analysis, alternative credit scoring methodologies, explainable AI adoption in underwriting, biomass energy project economics, and USDA rural development program trends.</p>
+        <p>Calculus Insights serves institutional investors, real estate developers, fintech operators, family offices, and research partners seeking differentiated perspectives on private capital markets and emerging financial technology. All publications are accessible through the Calculus website and distributed to the firm's institutional network.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FACTS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="heading-font text-xl font-bold mb-6 text-cr-charcoal">Key Facts — Calculus Insights</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-cr-border">
+              <th class="py-3 pr-6 text-cr-mist font-medium">Attribute</th>
+              <th class="py-3 text-cr-mist font-medium">Detail</th>
+            </tr>
+          </thead>
+          <tbody class="text-cr-charcoal/70">
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Publication Type</td><td class="py-3">Market Research &amp; Thought Leadership</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Coverage Areas</td><td class="py-3">Private Credit, AI, Real Estate, Energy, Fintech</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Publisher</td><td class="py-3">Calculus (Boston, MA)</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Audience</td><td class="py-3">Institutional investors, developers, fintech operators, family offices</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Data Sources</td><td class="py-3">Proprietary lending data, AI Labs R&amp;D, portfolio performance</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Distribution</td><td class="py-3">Website, institutional network, email</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-cr-surface border-t border-cr-border">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="heading-font text-3xl font-bold text-center mb-12 text-cr-charcoal">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>What is Calculus Insights?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">Calculus Insights is the research and thought leadership hub of Calculus, covering private credit markets, AI in financial services, real estate development trends, energy project finance, and fintech innovation. Research is published regularly and distributed to the firm's institutional network.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>Who writes Calculus Insights content?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">Research is produced by the Calculus team led by founder Sean Grady, drawing on expertise across direct lending operations, AI Labs product development, real estate development, and institutional asset management.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>What topics does Calculus Insights cover?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">Coverage spans bridge loan market analysis, DSCR lending trends, SBA program updates, AI underwriting methodologies, explainable AI in finance, real estate cap rate analysis, biomass energy project economics, USDA rural development programs, and portfolio company performance updates.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>How often is Calculus Insights updated?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">New research and market analysis is published on a regular basis, covering timely market developments, emerging trends in private credit and fintech, and updates from the Calculus AI Labs research pipeline.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>Can I subscribe to Calculus Insights?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">Yes. Contact hello@calculusresearch.io to join the distribution list for new research publications, market commentary, and AI product updates from Calculus.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

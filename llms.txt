@@ -1,0 +1,78 @@
+# Calculus — Financial Innovations
+# https://www.calculusresearch.io
+
+> Calculus is a multi-discipline private capital platform headquartered in Boston, Massachusetts, founded in 2020 by Sean Grady. The firm operates across direct lending, AI research, real estate development, energy project finance, and institutional asset management.
+
+## Company Overview
+- Name: Calculus (dba Calculus Research)
+- Founded: 2020
+- Founder & CEO: Sean Grady
+- Headquarters: Boston, MA
+- Second Office: Windsor, CT
+- Website: https://www.calculusresearch.io
+- Contact: hello@calculusresearch.io
+- AUM: $40MM+
+- Deployed: $150M+
+
+## Core Divisions
+
+### Calculus Lending
+Direct lending arm originating private credit for real estate and business borrowers. Seven loan products.
+- Fannie Mae & Freddie Mac Agency Loans: $750K–$100M+, rates 5.5%–7.5%, non-recourse, up to 80% LTV, 5–30 year terms, stabilized multifamily
+- DSCR Rental Loans: $150K–$3M, rates 6.0%–8.5%, no income verification, 30-year fixed/ARM, DSCR as low as 0.75
+- USDA B&I Guaranteed Loans: Up to $25M, rates 6.0%–9.0%, 80% federal guarantee, 30-year terms for rural businesses
+- Real Estate Bridge Loans: $1M–$15M, rates 9.0%–12.5%, 12–24 months, up to 85% LTC, multifamily/hospitality/mixed-use
+- SBA 7(a) Loans: Up to $5M, Prime + 2.25%–2.75%, 10–25 year terms, working capital and business acquisition
+- SBA 504 Loans: Up to $5.5M, below-market fixed rates, 10–25 year terms, major fixed assets
+- Business Lines of Credit: $50K–$500K, rates 8.0%–15.0%, revolving, 12–24 month terms
+- URL: https://www.calculusresearch.io/lending/
+
+### Calculus AI Labs
+Research and development division building AI products for financial services.
+- 16 AI products across 8 categories
+- Flagship: UnderwriteAI (automated underwriting, 700+ variables, under 4 seconds)
+- Platform: Triton Compression Engine (inference infrastructure)
+- Products include: Finclusion Score API, MarketPulse Forecast Engine, Voice AI Platform, Lex Intelligence, Constitutional Tender Terminal, Eureka Settlement Engine, DFIP, LedgerScript, ImpactAlpha Dashboard, Quantum Protocol, Ryegate Yield Engine, EdgeForge, ProbFlow, Orchestra
+- URL: https://www.calculusresearch.io/labs/
+
+### Real Estate Development
+Full-cycle real estate development and advisory for hospitality and multifamily projects.
+- Focus: Hospitality (hotels, resorts), multifamily (9+ units), mixed-use
+- Services: Acquisition sourcing, feasibility analysis, capital structuring, construction oversight
+- Markets: New England and nationally
+- URL: https://www.calculusresearch.io/real-estate/
+
+### Energy
+Biomass and renewable energy project development and finance.
+- Focus: Biomass power plants, renewable energy infrastructure
+- Markets: North America
+- URL: https://www.calculusresearch.io/energy/
+
+### Consulting
+Strategic advisory for institutional clients on capital markets, fintech, and AI adoption.
+- URL: https://www.calculusresearch.io/consulting/
+
+## Portfolio Companies
+- Compression AI Technologies: AI model compression and edge inference optimization
+- Quantum Protocol System: Quantitative trading and algorithmic portfolio management
+- Private AI Networks: Secure on-premise LLM deployment for financial institutions
+- Digital Money Center: Digital payments infrastructure and CBDC research
+- Constitutional Tender: Precious metals-backed digital settlement terminal
+
+## AI Portal
+Multi-LLM research interface for institutional clients. JWT-authenticated access to all 16 AI products.
+- URL: https://www.calculusresearch.io/ai-portal/
+
+## Key Pages
+- Home: https://www.calculusresearch.io/
+- Lending: https://www.calculusresearch.io/lending/
+- USDA B&I Loans: https://www.calculusresearch.io/usda-bi/
+- Real Estate: https://www.calculusresearch.io/real-estate/
+- Energy: https://www.calculusresearch.io/energy/
+- AI Labs: https://www.calculusresearch.io/labs/
+- Consulting: https://www.calculusresearch.io/consulting/
+- Portfolio: https://www.calculusresearch.io/portfolio/
+- AI Portal: https://www.calculusresearch.io/ai-portal/
+- Insights: https://www.calculusresearch.io/insights/
+- About: https://www.calculusresearch.io/about/
+- Contact: https://www.calculusresearch.io/contact/

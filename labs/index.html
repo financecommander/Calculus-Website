@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculus AI Labs | AI Underwriting, Alternative Credit Scoring & Market Forecasting | Boston</title>
+  <meta name="description" content="Calculus AI Labs: explainable AI underwriting in under 4 seconds (700+ variables), alternative credit scoring API for fintechs, and proprietary market forecasting. MLOps-driven model governance. Boston, MA.">
+  <meta property="og:title" content="Calculus AI Labs — AI Research & Product Development">
+  <meta property="og:description" content="Where Frontier AI Meets Real-World Capital. Proprietary AI research powering financial inclusion, food security, and energy resilience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.calculusresearch.io/labs/">
+  <link rel="canonical" href="https://www.calculusresearch.io/labs/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C',
+            'cr-green-600': '#3E9B5F',
+            'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22',
+            'cr-surface': '#F7F9F8',
+            'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1',
+            'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545',
+            'cr-info': '#2F6FED',
+            'cr-success': '#2E8B57',
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'cr-sm': '0 1px 2px rgba(0,0,0,.06)',
+            'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)',
+            'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(135deg, rgba(28,31,34,0.88), rgba(15,77,44,0.72)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .stagger-1 { animation: fadeIn 0.8s ease-out 0.1s both; }
+    .stagger-2 { animation: fadeIn 0.8s ease-out 0.2s both; }
+    .stagger-3 { animation: fadeIn 0.8s ease-out 0.3s both; }
+    .stagger-4 { animation: fadeIn 0.8s ease-out 0.4s both; }
+    .stagger-5 { animation: fadeIn 0.8s ease-out 0.5s both; }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+    @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(20,184,166,0.1); } 50% { box-shadow: 0 0 40px rgba(20,184,166,0.2); } }
+      .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .nav-link.active::after { width: 100%; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Calculus AI Labs",
+    "description": "AI research and product development for automated underwriting, alternative credit scoring, and market forecasting.",
+    "url": "https://www.calculusresearch.io/labs/",
+    "address": {"@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US"},
+    "parentOrganization": {"@type": "Organization", "name": "Calculus", "url": "https://www.calculusresearch.io"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is UnderwriteAI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "UnderwriteAI is Calculus AI Labs' flagship automated underwriting engine for financial services. Powered by the Triton Compression Engine, it analyzes more than 700 variables to produce a comprehensive risk assessment in under 4 seconds. The system generates explainable AI outputs with transparent rationale for lenders, credit committees, and regulators. UnderwriteAI performs DSCR, NOI, and cap rate analysis for commercial real estate and supports multi-asset class underwriting including private credit, bridge loans, and structured finance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Triton Compression Engine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Triton Compression Engine is Calculus AI Labs' proprietary inference platform that powers the entire product suite. It achieves 15x model compression at 101% quality retention through a full quantization pipeline validated by 465+ tests. Triton enables on-device deployment across mobile, edge, and air-gapped environments and directly powers UnderwriteAI, Voice AI Platform, EdgeForge, and Finclusion Score API. It is available for enterprise licensing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Constitutional Tender Terminal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Constitutional Tender Terminal is a multi-vault precious metals and digital currency settlement platform currently in launch phase. It supports 5 vaults and 6 currencies with transaction execution in under 4 seconds and a full audit trail. The system is designed for constitutional compliance in gold, silver, platinum, and palladium trading."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Voice AI Platform?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Voice AI Platform is a multi-model compliance voice system integrating 4 large language models with 10 compliance gates for regulated industries. Powered by the Triton Compression Engine, it delivers sub-850ms response times and is built for financial services, legal, and healthcare environments where voice interactions must be monitored and audited for regulatory compliance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is alternative credit scoring and how does Calculus use it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alternative credit scoring assesses creditworthiness using non-traditional data sources rather than conventional credit bureau records. Calculus AI Labs deploys alternative credit scoring through the Finclusion Score API, a RESTful interface powered by the Triton Compression Engine that generates credit scores for the estimated 1.4 billion unbanked adults worldwide. Fintech platforms, neobanks, and microfinance institutions integrate the API to extend financial products to previously excluded populations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many products does Calculus AI Labs offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculus AI Labs offers 16 AI products across 8 categories: Flagship (UnderwriteAI, Constitutional Tender Terminal), Core Infrastructure (Eureka Settlement Engine, DFIP), AI Products (Voice AI Platform, Lex Intelligence), Developer Tools and APIs (Finclusion Score API, LedgerScript), Analytics and Intelligence (ImpactAlpha Dashboard, MarketPulse Forecast Engine), Quantitative and Trading (Quantum Protocol, Ryegate Yield Engine), ML Infrastructure (EdgeForge, ProbFlow), and Orchestration (Orchestra). All products are built on the Triton Compression Engine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is explainable AI (XAI) in financial services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Explainable AI (XAI) refers to AI systems that produce outputs humans can understand, interpret, and audit. Calculus AI Labs builds all production models — including UnderwriteAI, Voice AI Platform, and Finclusion Score API — with explainability at their core. Every automated decision includes a transparent rationale, variable importance ranking, and audit trail for credit committees, compliance officers, and regulators."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Calculus AI Portal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Calculus AI Portal is a multi-LLM platform that provides authorized users with access to Calculus AI Labs' AI tools and research models. Users can run live demos of UnderwriteAI, access Finclusion Score API documentation, explore the full 16-product catalog, and interact with research prototypes. Authentication is managed via JWT security for institutional investors, portfolio managers, and research partners."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link active text-cr-green-900 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-green-900 font-medium hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-[85vh] flex items-center">
+    <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+      <div class="inline-block bg-white/10 border border-white/20 text-white/80 text-sm font-medium px-6 py-2 rounded-full mb-8">
+        AI Research &middot; Product Development &middot; Proprietary Models
+      </div>
+      <h1 class="heading-font text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
+        Proprietary AI for Underwriting, Credit Scoring &amp; Market Intelligence
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-4 leading-relaxed">
+        Explainable AI models powering automated underwriting in under 4 seconds, alternative credit scoring for 1.4B unbanked adults, and real-time market forecasting across asset classes.
+      </p>
+      <p class="text-cr-gold-500 text-xl md:text-2xl font-semibold heading-font mb-10">
+        Where Frontier AI Meets Real-World Capital
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="#research-areas" class="bg-white text-cr-charcoal px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-cr-surface2 transition">Explore Our Research</a>
+        <a href="#products" class="border border-white/40 text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition">View Products</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-white/60">
+        <div class="flex items-center gap-2"><i class="fas fa-building-columns text-cr-gold-500"></i> Financial Inclusion</div>
+        <div class="flex items-center gap-2"><i class="fas fa-wheat-awn text-cr-gold-500"></i> Food Security</div>
+        <div class="flex items-center gap-2"><i class="fas fa-bolt text-cr-gold-500"></i> Energy Stability</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LABS STATS -->
+  <section class="py-16 bg-cr-surface border-y border-cr-border">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">5</div>
+        <div class="text-cr-mist mt-2 text-sm">Research Divisions</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">16</div>
+        <div class="text-cr-mist mt-2 text-sm">AI Products</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">&lt;4s</div>
+        <div class="text-cr-mist mt-2 text-sm">Underwriting Speed</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">700+</div>
+        <div class="text-cr-mist mt-2 text-sm">Variables Analyzed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Our Mission</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">AI That Deploys Capital to Underserved Markets</h2>
+        <p class="text-cr-mist mt-4 max-w-3xl mx-auto leading-relaxed">Calculus AI Labs builds proprietary AI systems that drive measurable impact across three critical domains &mdash; financial inclusion for the unbanked, food security for vulnerable communities, and energy stability for a sustainable future.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-5">
+            <i class="fas fa-building-columns text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Financial Inclusion</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">AI-powered alternative credit scoring enables capital access for the 1.4 billion unbanked adults worldwide, using non-traditional data to assess creditworthiness.</p>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-5">
+            <i class="fas fa-wheat-awn text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Food Security</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Supply-chain forecasting models predict disruptions before they happen, enabling proactive intervention and resilient agricultural infrastructure.</p>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 text-center card-hover">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-5">
+            <i class="fas fa-bolt text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Energy Stability</h3>
+          <p class="text-cr-mist text-sm leading-relaxed">Demand modeling and resilience analytics for energy grids, accelerating renewable integration and optimizing distribution for underserved regions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI RESEARCH DIVISION -->
+  <section id="research-areas" class="py-20 bg-cr-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">AI Research Division</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">Five Proprietary AI Research Divisions</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">Proprietary AI research across five interconnected domains, each designed to generate actionable intelligence for investors and communities.</p>
+      </div>
+
+      <!-- Research Area 1 -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white border border-cr-border rounded-2xl p-8 card-hover stagger-1">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-user-shield text-cr-green-600"></i>
+          </div>
+          <div class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest mb-3">Research Area 01</div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Alternative Data Credit Scoring</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Building credit models for the unbanked using non-traditional data sources &mdash; mobile money transactions, utility payments, social commerce activity, and geospatial data &mdash; to unlock capital access for underserved populations globally.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Mobile money & telco data integration</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Utility & rent payment history analysis</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Geospatial economic activity modeling</li>
+          </ul>
+        </div>
+
+        <!-- Research Area 2 -->
+        <div class="bg-white border border-cr-border rounded-2xl p-8 card-hover stagger-2">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-seedling text-cr-green-600"></i>
+          </div>
+          <div class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest mb-3">Research Area 02</div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Food Security Supply-Chain Forecasting</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Predictive analytics for agricultural supply chains that anticipate disruptions, optimize logistics, and ensure food access. Integrating satellite imagery, weather data, and trade flow intelligence.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Satellite crop yield estimation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Climate disruption early warning</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Trade flow & logistics optimization</li>
+          </ul>
+        </div>
+
+        <!-- Research Area 3 -->
+        <div class="bg-white border border-cr-border rounded-2xl p-8 card-hover stagger-3">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-solar-panel text-cr-green-600"></i>
+          </div>
+          <div class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest mb-3">Research Area 03</div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Energy Demand &amp; Resilience Modeling</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">AI-driven grid optimization and renewable energy integration models. Predicting demand patterns, identifying infrastructure vulnerabilities, and modeling decarbonization pathways.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Grid load balancing optimization</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Renewable integration forecasting</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Infrastructure resilience scoring</li>
+          </ul>
+        </div>
+
+        <!-- Research Area 4 -->
+        <div class="bg-white border border-cr-border rounded-2xl p-8 card-hover stagger-4">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-wand-magic-sparkles text-cr-green-600"></i>
+          </div>
+          <div class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest mb-3">Research Area 04</div>
+          <h3 class="text-xl font-semibold mb-3 heading-font">Generative AI for Deal Packaging</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Large language models and generative AI that automate the creation of pitch decks, financial models, executive summaries, and investor-ready documentation &mdash; reducing deal packaging time from weeks to hours.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Automated pitch deck generation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Dynamic financial model creation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Investor narrative optimization</li>
+          </ul>
+        </div>
+
+        <!-- Research Area 5 -->
+        <div class="bg-white border border-cr-border rounded-2xl p-8 card-hover stagger-5 md:col-span-2 lg:col-span-2">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-1">
+              <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6">
+                <i class="fas fa-leaf text-cr-green-600"></i>
+              </div>
+              <div class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest mb-3">Research Area 05</div>
+              <h3 class="text-xl font-semibold mb-3 heading-font">Impact Alpha Scoring Engine</h3>
+              <p class="text-cr-mist text-sm leading-relaxed mb-5">Quantitative ESG and impact measurement framework that generates a proprietary "Impact Alpha" score for every investment. Enables LPs and investors to measure real-world outcomes alongside financial returns.</p>
+            </div>
+            <div class="flex-1">
+              <ul class="text-sm text-cr-mist space-y-2 md:mt-20">
+                <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Proprietary ESG scoring methodology</li>
+                <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Real-time impact metric tracking</li>
+                <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> LP portfolio impact attribution</li>
+                <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> SDG alignment mapping</li>
+                <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-circle"></i></span> Comparative benchmark analytics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATALOG -->
+  <section id="products" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Product Catalog</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">AI Products Powering Real Capital Decisions</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">16 production systems spanning underwriting, settlement, compliance, trading, and ML infrastructure &mdash; all powered by the Triton Compression Engine.</p>
+      </div>
+
+      <!-- TRITON PLATFORM BANNER -->
+      <div class="bg-gradient-to-r from-indigo-950 to-slate-900 border border-indigo-500/30 rounded-2xl p-8 md:p-10 mb-12 relative overflow-hidden">
+        <div class="absolute top-6 right-6 flex items-center gap-2">
+          <span class="bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">PLATFORM</span>
+        </div>
+        <div class="flex flex-col md:flex-row items-start gap-8">
+          <div class="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+            <i class="fas fa-microchip text-indigo-400"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl md:text-3xl font-semibold mb-1 heading-font">Triton Compression Engine</h3>
+            <p class="text-indigo-400 text-sm font-medium mb-4">The Inference Engine Behind Calculus AI Labs</p>
+            <p class="text-cr-charcoal/70 text-sm leading-relaxed mb-6">Proprietary compiler technology that compresses machine learning models up to 15x while maintaining or exceeding baseline quality. Powers real-time inference across Calculus products and available for enterprise licensing.</p>
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div class="bg-white/60 rounded-[14px] p-4 text-center">
+                <div class="text-2xl font-bold text-indigo-400 heading-font">15x</div>
+                <div class="text-xs text-cr-mist mt-1">Compression</div>
+              </div>
+              <div class="bg-white/60 rounded-[14px] p-4 text-center">
+                <div class="text-2xl font-bold text-indigo-400 heading-font">101%</div>
+                <div class="text-xs text-cr-mist mt-1">Quality Retained</div>
+              </div>
+              <div class="bg-white/60 rounded-[14px] p-4 text-center">
+                <div class="text-2xl font-bold text-indigo-400 heading-font">465+</div>
+                <div class="text-xs text-cr-mist mt-1">Validation Tests</div>
+              </div>
+            </div>
+            <ul class="text-sm text-cr-mist space-y-2">
+              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Powers UnderwriteAI, Voice AI, EdgeForge, and Finclusion inference</li>
+              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Enterprise licensing for custom model compression</li>
+              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Mobile, edge, and air-gapped deployment</li>
+              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Healthcare (HIPAA-local), defense (air-gapped), autonomous systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 1: FLAGSHIP -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">Flagship</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover relative pulse-glow">
+          <div class="absolute top-6 right-6"><span class="bg-cr-green-900 text-white text-xs font-bold px-3 py-1 rounded-full">FLAGSHIP</span></div>
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-robot text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-1 heading-font">UnderwriteAI</h3>
+          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Real-Time Automated Underwriting</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Institutional-grade automated underwriting engine that analyzes 700+ variables in under 4 seconds. Delivers risk scores, deal feasibility assessments, and term sheet recommendations with explainable AI outputs.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-cr-green-600 heading-font">700+</div><div class="text-xs text-cr-mist mt-1">Variables Analyzed</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-cr-green-600 heading-font">&lt;4s</div><div class="text-xs text-cr-mist mt-1">Processing Time</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Explainable AI risk scoring</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Automated term sheet generation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-asset class support</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-amber-500/30 rounded-2xl p-8 card-hover relative">
+          <div class="absolute top-6 right-6"><span class="bg-amber-500 text-cr-charcoal text-xs font-bold px-3 py-1 rounded-full">LAUNCHING</span></div>
+          <div class="w-14 h-14 bg-amber-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-coins text-amber-400"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">Constitutional Tender Terminal</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Institutional Precious Metals Infrastructure</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">End-to-end precious metals facilitation platform connecting buyers to allocated vaulting across five international depositories. Multi-currency execution with real-time spot pricing and book-entry transfer capabilities.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-amber-400 heading-font">5</div><div class="text-xs text-cr-mist mt-1">Global Vaults</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-amber-400 heading-font">6</div><div class="text-xs text-cr-mist mt-1">Currencies</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-amber-400 heading-font">&lt;4s</div><div class="text-xs text-cr-mist mt-1">Execution</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Real-time spot pricing with FX conversion</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> International allocated custody</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Book-entry vault-to-vault transfers</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Institutional-grade compliance workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 2: CORE INFRASTRUCTURE -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">Core Infrastructure</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-atom text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">Eureka Settlement Engine</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Atomic Multi-Asset Settlement</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Non-custodial settlement coordination layer that executes atomic transactions across fiat, metals, and digital assets. Coordinates escrow, custodial locks, and instant liquidity events without assuming balance sheet exposure.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">3</div><div class="text-xs text-cr-mist mt-1">Asset Classes</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">Atomic</div><div class="text-xs text-cr-mist mt-1">Execution</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">Zero</div><div class="text-xs text-cr-mist mt-1">Custody Risk</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-party escrow coordination</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Custodial lock management</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Hybrid asset settlement</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Instant liquidity at closing</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-cubes text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">DFIP</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Modular Financial Microservices</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Eight-service financial infrastructure platform covering the full lifecycle of institutional capital operations &mdash; from ledger and compliance through custody, settlement, and digital asset management.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">8</div><div class="text-xs text-cr-mist mt-1">Services</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">&lt;1s</div><div class="text-xs text-cr-mist mt-1">Latency</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">99.9%</div><div class="text-xs text-cr-mist mt-1">Uptime</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Independent services with clean API boundaries</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Market-hours-aware scheduling</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Enterprise health monitoring</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Correlation-tracked audit logging</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 3: AI PRODUCTS -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">AI Products</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-blue-500/30 rounded-2xl p-8 card-hover relative">
+          <div class="absolute top-6 right-6"><span class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-MODEL</span></div>
+          <div class="w-14 h-14 bg-blue-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-headset text-blue-400"></i></div>
+          <h3 class="text-2xl font-semibold mb-1 heading-font">Voice AI Platform</h3>
+          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Intelligent Voice Agents for Financial Services</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Multi-model voice AI system that routes conversations across frontier LLMs based on complexity, compliance sensitivity, and latency requirements. Progressive authentication with built-in regulatory guardrails.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-blue-400 heading-font">4</div><div class="text-xs text-cr-mist mt-1">LLMs</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-blue-400 heading-font">10</div><div class="text-xs text-cr-mist mt-1">Compliance Gates</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-blue-400 heading-font">&lt;850ms</div><div class="text-xs text-cr-mist mt-1">Response</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-LLM orchestration with automatic routing</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Progressive 4-tier authentication</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Cross-product warm transfers with context</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Full compliance audit trail per call</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-emerald-500/30 rounded-2xl p-8 card-hover relative">
+          <div class="absolute top-6 right-6"><span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">PIPELINE</span></div>
+          <div class="w-14 h-14 bg-emerald-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-scale-balanced text-emerald-400"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">Lex Intelligence</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Multi-Agent Legal Research</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Six-agent legal research pipeline that cross-validates findings across four frontier models to produce structured legal memoranda with confidence ratings and verified citations.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-emerald-400 heading-font">6</div><div class="text-xs text-cr-mist mt-1">Agents</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-emerald-400 heading-font">4</div><div class="text-xs text-cr-mist mt-1">Models</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-emerald-400 heading-font">&lt;$0.60</div><div class="text-xs text-cr-mist mt-1">Per Query</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Cross-model validation and bias reduction</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Real-time case law retrieval</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Bluebook-formatted citation verification</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Per-conclusion confidence ratings</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 4: DEVELOPER TOOLS & APIs -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">Developer Tools &amp; APIs</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-code text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-1 heading-font">Finclusion Score API</h3>
+          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Alternative Credit Scoring for Fintechs</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">RESTful API that delivers alternative credit scores for unbanked and underbanked populations. Designed for fintech platforms, neobanks, and microfinance institutions seeking to expand access to credit.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> REST API with JSON responses</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-source data aggregation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Confidence scoring per assessment</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-file-code text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">LedgerScript</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Financial Compliance DSL</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Domain-specific language for programmatic compliance modeling. Define investment structures, waterfall distributions, and regulatory requirements in code with built-in jurisdiction-aware enforcement.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Compliance gates embedded in the language</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Automated disclosure generation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-jurisdiction support</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Monte Carlo risk simulation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 5: ANALYTICS & INTELLIGENCE -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">Analytics &amp; Intelligence</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-chart-line text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">ImpactAlpha Dashboard</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">LP Portfolio Monitoring</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Real-time portfolio monitoring dashboard for limited partners. Track financial performance alongside impact metrics, ESG scores, and SDG alignment across your entire investment portfolio.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Real-time impact metrics</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> ESG &amp; SDG alignment tracking</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Customizable LP reporting</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Portfolio-level attribution</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-chart-bar text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-1 heading-font">MarketPulse Forecast Engine</h3>
+          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Daily Market Forecasting Reports</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Proprietary quantitative models generate daily market forecasting reports across asset classes. Combines alternative data, sentiment analysis, macro indicators, and technical signals into actionable intelligence.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Daily automated reports</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-asset class coverage</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Proprietary signal generation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Sentiment &amp; alternative data fusion</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 6: QUANTITATIVE & TRADING -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">Quantitative &amp; Trading</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-wave-square text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">Quantum Protocol</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Algorithmic Trading Infrastructure</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Five-sleeve algorithmic trading system with complementary strategies spanning treasury yield, compression, scaling, and convexity. Macro-anchored risk management with institutional broker integration.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">5</div><div class="text-xs text-cr-mist mt-1">Sleeves</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">Broker</div><div class="text-xs text-cr-mist mt-1">Integrated</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">FRED</div><div class="text-xs text-cr-mist mt-1">Macro Anchored</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-strategy portfolio optimization</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Real-time risk management</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> FRED-anchored macro signals</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Paper and live execution modes</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-link text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">Ryegate Yield Engine</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Tokenized Debt Issuance Platform</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Infrastructure for issuing and managing tokenized debt instruments under security token standards. Institutional trustee integration with compliant distribution to qualified investors.</p>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xs font-bold text-cr-green-600 heading-font">Security Token</div><div class="text-xs text-cr-mist mt-1">Compliant</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xs font-bold text-cr-green-600 heading-font">Institutional</div><div class="text-xs text-cr-mist mt-1">Trustees</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xs font-bold text-cr-green-600 heading-font">Reg D</div><div class="text-xs text-cr-mist mt-1">Ready</div></div>
+          </div>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Tokenized note issuance framework</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Institutional trustee integration</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Accredited investor distribution</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Full lifecycle management</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 7: ML INFRASTRUCTURE -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">ML Infrastructure</span></div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-bolt text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-1 heading-font">EdgeForge</h3>
+          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Edge ML Deployment</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Deployment framework for pushing machine learning models to resource-constrained environments. Automated compression, hardware-aware optimization, and streamlined deployment pipelines.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Automated model compression</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Hardware-aware optimization</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Edge-native deployment pipelines</li>
+          </ul>
+        </div>
+
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-chart-area text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">ProbFlow</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Probabilistic Modeling Engine</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Quantitative modeling framework for uncertainty quantification and risk distribution analysis. Monte Carlo simulation, Bayesian inference, and financial scenario modeling in a single toolkit.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Monte Carlo simulation</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Bayesian inference primitives</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Risk distribution modeling</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROW 8: ORCHESTRATION -->
+      <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">Orchestration</span></div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover md:col-span-2 lg:col-span-1">
+          <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-sitemap text-cr-green-600"></i></div>
+          <h3 class="text-2xl font-semibold mb-2 heading-font">Orchestra</h3>
+          <p class="text-cr-green-600 text-sm font-medium mb-4">Multi-Agent Orchestration Language</p>
+          <p class="text-cr-mist text-sm leading-relaxed mb-6">Declarative orchestration layer for coordinating AI agents across complex workflows. Define routing rules, latency budgets, fallback chains, and model-specific task assignment in a single configuration.</p>
+          <ul class="text-sm text-cr-mist space-y-2">
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Declarative agent routing</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Automatic failover and fallback</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Latency-budget enforcement</li>
+            <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Cross-agent context threading</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI PORTAL CTA -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-cr-border rounded-2xl p-10 md:p-14 text-center">
+        <div class="w-20 h-20 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-4xl mb-8">
+          <i class="fas fa-brain text-cr-green-600"></i>
+        </div>
+        <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4">Access the AI Portal</h2>
+        <p class="text-cr-mist max-w-2xl mx-auto mb-8 leading-relaxed">Explore our suite of AI tools, run live demos of UnderwriteAI, access the Finclusion Score API documentation, and interact with our research models directly.</p>
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-cr-green-900 text-white hover:bg-cr-green-600 px-10 py-4 rounded-2xl font-semibold text-lg transition">
+          <i class="fas fa-rocket"></i> Launch AI Portal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: WHAT IS CALCULUS LABS -->
+  <section id="what-is-calculus-labs" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Overview</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold">What Is Calculus AI Labs?</h2>
+      </div>
+
+      <!-- Definitional Prose -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 md:p-10 space-y-5 text-cr-charcoal/70 text-[15px] leading-relaxed">
+          <p>Calculus AI Labs is the proprietary AI research and product development division of Calculus, headquartered in Boston, Massachusetts. The division develops explainable artificial intelligence systems for financial services, focusing on automated underwriting, alternative credit scoring, settlement infrastructure, market forecasting, and edge AI deployment. Calculus AI Labs operates five dedicated research areas and maintains a catalog of 16 AI products spanning flagship platforms, core infrastructure, developer APIs, analytics engines, quantitative trading systems, ML infrastructure, and multi-agent orchestration.</p>
+          <p>The entire product suite is powered by the <strong class="text-cr-charcoal">Triton Compression Engine</strong>, Calculus AI Labs' proprietary inference platform. Triton achieves 15x model compression at 101% quality retention through a full quantization pipeline validated by 465+ tests, enabling on-device deployment for mobile, edge, and air-gapped environments. Triton is available for enterprise licensing and directly powers UnderwriteAI, Voice AI, EdgeForge, and Finclusion Score API.</p>
+          <p>The flagship product, <strong class="text-cr-charcoal">UnderwriteAI</strong>, is a real-time automated underwriting engine that analyzes more than 700 variables in under 4 seconds. UnderwriteAI delivers explainable AI risk scores, deal feasibility assessments, and automated term sheet recommendations. The system performs DSCR (debt service coverage ratio), NOI (net operating income), and cap rate analysis across commercial real estate, private credit, and multi-asset portfolios.</p>
+          <p>The <strong class="text-cr-charcoal">Constitutional Tender Terminal</strong> is a launching-stage multi-vault precious metals and digital currency settlement platform. It supports 5 vaults, 6 currencies, and executes transactions in under 4 seconds with full audit trail and constitutional compliance for gold, silver, platinum, and palladium trading.</p>
+          <p>Core infrastructure includes the <strong class="text-cr-charcoal">Eureka Settlement Engine</strong> for atomic, multi-asset settlement across 3 asset classes with zero custody risk, and <strong class="text-cr-charcoal">DFIP</strong> (Decentralized Financial Infrastructure Protocol), a modular microservices platform delivering 8 financial services at sub-second latency with 99.9% uptime.</p>
+          <p>The <strong class="text-cr-charcoal">Voice AI Platform</strong> is a multi-model compliance voice system integrating 4 LLMs with 10 compliance gates and sub-850ms response times. <strong class="text-cr-charcoal">Lex Intelligence</strong> is a legal research pipeline using 6 AI agents and 4 models at under $0.60 per query. The <strong class="text-cr-charcoal">Finclusion Score API</strong> provides RESTful alternative credit scoring for fintech platforms and the 1.4 billion unbanked adults worldwide, while <strong class="text-cr-charcoal">LedgerScript</strong> is a compliance DSL for waterfall distributions and multi-jurisdiction fund accounting.</p>
+          <p>Analytics and intelligence products include the <strong class="text-cr-charcoal">ImpactAlpha Dashboard</strong> for LP portfolio monitoring with ESG/SDG tracking, and the <strong class="text-cr-charcoal">MarketPulse Forecast Engine</strong> for daily multi-asset forecasting with sentiment fusion. Quantitative systems include <strong class="text-cr-charcoal">Quantum Protocol</strong> for algorithmic trading across 5 sleeves with broker integration, and <strong class="text-cr-charcoal">Ryegate Yield Engine</strong> for tokenized debt issuance compliant with Reg D securities regulations.</p>
+          <p>ML infrastructure includes <strong class="text-cr-charcoal">EdgeForge</strong> for automated edge ML deployment with Triton-powered compression, <strong class="text-cr-charcoal">ProbFlow</strong> for probabilistic modeling with Monte Carlo and Bayesian inference, and <strong class="text-cr-charcoal">Orchestra</strong> for declarative multi-agent orchestration with routing, failover, and latency budgets. The division operates under an MLOps-driven model governance framework to ensure reproducibility, auditability, and regulatory compliance across all deployed models.</p>
+        </div>
+      </div>
+
+      <!-- Key Facts Table -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <h3 class="heading-font text-2xl font-bold mb-6 text-center">Calculus AI Labs Key Facts</h3>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl overflow-hidden">
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-cr-border">
+                <td class="px-6 py-4 text-cr-mist font-medium w-1/3">Division</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Calculus AI Labs &mdash; AI Research &amp; Product Development</td>
+              </tr>
+              <tr class="border-b border-cr-border bg-white/50">
+                <td class="px-6 py-4 text-cr-mist font-medium">Parent Organization</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Calculus</td>
+              </tr>
+              <tr class="border-b border-cr-border">
+                <td class="px-6 py-4 text-cr-mist font-medium">Headquarters</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Boston, Massachusetts, United States</td>
+              </tr>
+              <tr class="border-b border-cr-border bg-white/50">
+                <td class="px-6 py-4 text-cr-mist font-medium">Research Areas</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">5 (Alternative Data Credit Scoring, Food Security Forecasting, Energy Modeling, Generative AI Deal Packaging, Impact Alpha Scoring)</td>
+              </tr>
+              <tr class="border-b border-cr-border">
+                <td class="px-6 py-4 text-cr-mist font-medium">AI Products</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">16 products across 8 categories: Flagship, Core Infrastructure, AI Products, Developer Tools &amp; APIs, Analytics &amp; Intelligence, Quantitative &amp; Trading, ML Infrastructure, Orchestration</td>
+              </tr>
+              <tr class="border-b border-cr-border bg-white/50">
+                <td class="px-6 py-4 text-cr-mist font-medium">Inference Platform</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Triton Compression Engine &mdash; 15x compression, 101% quality, 465+ validation tests, on-device deployment</td>
+              </tr>
+              <tr class="border-b border-cr-border">
+                <td class="px-6 py-4 text-cr-mist font-medium">Flagship Product</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">UnderwriteAI &mdash; 700+ variables, &lt;4-second processing, explainable AI outputs</td>
+              </tr>
+              <tr class="border-b border-cr-border bg-white/50">
+                <td class="px-6 py-4 text-cr-mist font-medium">Settlement &amp; Infrastructure</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Constitutional Tender Terminal, Eureka Settlement Engine, DFIP &mdash; multi-vault, atomic execution, modular microservices</td>
+              </tr>
+              <tr class="border-b border-cr-border">
+                <td class="px-6 py-4 text-cr-mist font-medium">AI &amp; Voice</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Voice AI Platform (4 LLMs, 10 compliance gates), Lex Intelligence (6 agents, &lt;$0.60/query)</td>
+              </tr>
+              <tr class="border-b border-cr-border bg-white/50">
+                <td class="px-6 py-4 text-cr-mist font-medium">Developer APIs</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">Finclusion Score API (REST, alternative credit), LedgerScript (compliance DSL, waterfall distributions)</td>
+              </tr>
+              <tr class="border-b border-cr-border">
+                <td class="px-6 py-4 text-cr-mist font-medium">Analytics &amp; Trading</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">ImpactAlpha Dashboard, MarketPulse Forecast Engine, Quantum Protocol, Ryegate Yield Engine</td>
+              </tr>
+              <tr class="border-b border-cr-border bg-white/50">
+                <td class="px-6 py-4 text-cr-mist font-medium">ML Infrastructure</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">EdgeForge (edge deployment), ProbFlow (probabilistic modeling), Orchestra (multi-agent orchestration)</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-cr-mist font-medium">Model Governance</td>
+                <td class="px-6 py-4 text-cr-charcoal/80">MLOps-driven framework for auditability, reproducibility, and regulatory compliance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="max-w-4xl mx-auto">
+        <h3 class="heading-font text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h3>
+        <div class="space-y-4">
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is UnderwriteAI?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>UnderwriteAI is Calculus AI Labs' flagship automated underwriting engine for financial services. Powered by the Triton Compression Engine, it analyzes more than 700 variables &mdash; including borrower financials, property-level data, market conditions, and macroeconomic indicators &mdash; to produce a comprehensive risk assessment in under 4 seconds. The system generates explainable AI outputs, meaning every risk score is accompanied by a transparent rationale that lenders, credit committees, and regulators can audit. UnderwriteAI performs DSCR (debt service coverage ratio), NOI (net operating income), and cap rate analysis for commercial real estate transactions, and supports multi-asset class underwriting including private credit, bridge loans, and structured finance.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is the Triton Compression Engine?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>The Triton Compression Engine is Calculus AI Labs' proprietary inference platform that powers the entire product suite. Triton achieves 15x model compression while maintaining 101% quality retention through a full quantization pipeline validated by 465+ tests. It enables on-device deployment across mobile, edge, and air-gapped environments, meaning AI models can run locally without internet connectivity. Triton directly powers UnderwriteAI, Voice AI Platform, EdgeForge, and Finclusion Score API, and is available for enterprise licensing.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is the Constitutional Tender Terminal?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>The Constitutional Tender Terminal is a multi-vault precious metals and digital currency settlement platform currently in launch phase. It supports 5 vaults and 6 currencies with transaction execution in under 4 seconds and a full audit trail. The system is designed for constitutional compliance in gold, silver, platinum, and palladium trading, providing institutional-grade settlement infrastructure for precious metals markets.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is the Voice AI Platform?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>The Voice AI Platform is a multi-model compliance voice system that integrates 4 large language models (LLMs) with 10 compliance gates for regulated industries. Powered by the Triton Compression Engine, it delivers sub-850ms response times and is built for financial services, legal, and healthcare environments where voice interactions must be monitored, recorded, and audited for regulatory compliance. The platform routes queries across multiple AI models to select the optimal response for each context.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is alternative credit scoring and how does Calculus use it?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>Alternative credit scoring is a method of assessing an individual's or business's creditworthiness using non-traditional data sources rather than conventional credit bureau records. This includes mobile money transactions, utility payment histories, rent payments, e-commerce activity, and geospatial economic data. Calculus AI Labs deploys alternative credit scoring through the Finclusion Score API, a RESTful interface powered by the Triton Compression Engine that generates credit scores for the estimated 1.4 billion unbanked adults worldwide who have no formal credit history. Fintech platforms, neobanks, and microfinance institutions integrate the Finclusion Score API to extend loans and financial products to populations previously excluded from the formal banking system.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>How many products does Calculus AI Labs offer?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>Calculus AI Labs offers 16 AI products organized across 8 categories. The catalog includes the Triton Compression Engine (the underlying inference platform), flagship products (UnderwriteAI and Constitutional Tender Terminal), core infrastructure (Eureka Settlement Engine and DFIP), AI products (Voice AI Platform and Lex Intelligence), developer tools and APIs (Finclusion Score API and LedgerScript), analytics and intelligence (ImpactAlpha Dashboard and MarketPulse Forecast Engine), quantitative and trading systems (Quantum Protocol and Ryegate Yield Engine), ML infrastructure (EdgeForge and ProbFlow), and orchestration (Orchestra). All products are built on or integrate with the Triton Compression Engine for optimized inference performance.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is explainable AI (XAI) in financial services?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>Explainable AI (XAI) refers to artificial intelligence systems that produce outputs humans can understand, interpret, and audit. In financial services, explainability is critical because lending decisions, risk assessments, and investment recommendations must comply with regulatory frameworks such as the Equal Credit Opportunity Act (ECOA), fair lending requirements, and fiduciary obligations. Calculus AI Labs builds all of its production models &mdash; including UnderwriteAI, Voice AI Platform, and the Finclusion Score API &mdash; with explainability at their core. Every automated decision includes a transparent rationale, variable importance ranking, and audit trail, enabling credit committees, compliance officers, and regulators to verify that outcomes are fair, accurate, and non-discriminatory.</p>
+            </div>
+          </details>
+
+          <details class="bg-cr-surface border border-cr-border rounded-2xl group">
+            <summary class="px-6 py-5 cursor-pointer flex items-center justify-between text-cr-charcoal font-semibold hover:text-cr-green-600 transition">
+              <span>What is the Calculus AI Portal?</span>
+              <i class="fas fa-chevron-down text-cr-green-600 text-sm transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-cr-mist text-sm leading-relaxed">
+              <p>The Calculus AI Portal is a multi-LLM (large language model) platform that provides authorized users with access to Calculus AI Labs' AI tools and research models. The portal enables users to run live demos of UnderwriteAI, access Finclusion Score API documentation, explore the full 16-product catalog, and interact with research prototypes. Authentication is managed via JWT (JSON Web Token) security, and the platform serves institutional investors, portfolio managers, and research partners who require direct access to Calculus AI Labs' AI capabilities.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6">Partner With Calculus AI Labs</h2>
+      <p class="text-cr-mist text-lg mb-10 leading-relaxed">Whether you are an investor seeking impact-driven analytics, a fintech looking to integrate alternative credit scoring, or an institution exploring AI-powered underwriting &mdash; let's build together.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-600 px-10 py-4 rounded-2xl font-semibold text-lg transition">Contact Our Team</a>
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-600 hover:bg-cr-green-900 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition">Launch AI Portal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUBSPOT FORM PLACEHOLDER -->
+  <section class="py-20 bg-cr-surface border-t border-cr-border">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+        <p class="text-cr-mist">Interested in our AI research or products? Drop us a line and our team will respond within 24 hours.</p>
+      </div>
+      <!-- HubSpot Form Placeholder -->
+      <div class="bg-white border border-cr-border rounded-2xl p-10 text-center">
+        <div class="w-16 h-16 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-6">
+          <i class="fab fa-hubspot text-cr-green-600"></i>
+        </div>
+        <p class="text-cr-mist text-sm mb-6">HubSpot form will load here.</p>
+        <!-- Replace the div below with your HubSpot embed code -->
+        <div id="hubspot-form-placeholder" class="min-h-[200px] flex items-center justify-center border border-dashed border-cr-border rounded-[14px]">
+          <p class="text-cr-mist text-sm">
+            <i class="fas fa-code mr-2"></i> Insert HubSpot embed script here
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>

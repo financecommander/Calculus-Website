@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Portal | Private Multi-LLM Intelligence Platform — Calculus AI Labs</title>
+  <meta name="description" content="Calculus AI Labs AI Portal: Private multi-LLM intelligence platform with multi-agent pipelines, secure JWT authentication, and live token tracking. React 19 + FastAPI powered.">
+  <meta property="og:title" content="AI Portal — Calculus AI Labs">
+  <meta property="og:description" content="Private multi-LLM intelligence platform. Multi-agent pipelines powered by Grok, GPT-4o, Claude, and Gemini.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.calculusresearch.io/ai-portal/">
+  <link rel="canonical" href="https://www.calculusresearch.io/ai-portal/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cr-green-900': '#0F4D2C',
+            'cr-green-600': '#3E9B5F',
+            'cr-gold-500': '#F2A41F',
+            'cr-charcoal': '#1C1F22',
+            'cr-surface': '#F7F9F8',
+            'cr-surface2': '#EEF2F0',
+            'cr-border': '#DDE6E1',
+            'cr-mist': '#A9B7AE',
+            'cr-danger': '#D64545',
+            'cr-info': '#2F6FED',
+            'cr-success': '#2E8B57',
+          },
+          fontFamily: { heading: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+          boxShadow: { 'cr-sm': '0 1px 2px rgba(0,0,0,.06)', 'cr': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.04)', 'cr-md': '0 1px 2px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.10)' },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(15,77,44,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(15,77,44,0.06) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(28,31,34,0.88), rgba(15,77,44,0.72));
+    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #F2A41F; transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active::after { width: 100%; }
+    .cr-focus:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F9F8, 0 0 0 4px #F2A41F; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in-delay-1 { animation: fadeIn 0.8s ease-out 0.15s both; }
+    .fade-in-delay-2 { animation: fadeIn 0.8s ease-out 0.3s both; }
+    .fade-in-delay-3 { animation: fadeIn 0.8s ease-out 0.45s both; }
+    @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-dot { display: inline-block; width: 8px; height: 8px; background: #2E8B57; border-radius: 50%; animation: pulse-live 2s ease-in-out infinite; box-shadow: 0 0 6px rgba(46,139,87,0.5); }
+    html { scroll-behavior: smooth; }
+
+    /* Tech/futuristic animations */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(15,77,44,0.15); }
+      50% { box-shadow: 0 0 40px rgba(15,77,44,0.3); }
+    }
+    .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+    @keyframes grid-scan {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 0% 100%; }
+    }
+    .grid-overlay {
+      background-image:
+        linear-gradient(rgba(15,77,44,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,77,44,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: grid-scan 20s linear infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-anim { animation: float 6s ease-in-out infinite; }
+    .float-anim-delay { animation: float 6s ease-in-out 2s infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .shimmer-text {
+      background: linear-gradient(90deg, #0F4D2C, #3E9B5F, #0F4D2C);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .tech-border {
+      position: relative;
+    }
+    .tech-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(15,77,44,0.4), transparent 50%, rgba(15,77,44,0.2));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .step-connector {
+      position: relative;
+    }
+    .step-connector::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -2rem;
+      width: 2rem;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(15,77,44,0.4), transparent);
+    }
+    @media (max-width: 768px) {
+      .step-connector::after { display: none; }
+    }
+  </style>
+
+  <!-- Schema.org: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculus AI Portal",
+    "description": "Multi-LLM research platform providing institutional access to Calculus AI Labs' AI-powered underwriting tools, credit scoring APIs, market forecasting models, and research prototypes.",
+    "url": "https://www.calculusresearch.io/ai-portal/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "creator": {"@type": "Organization", "name": "Calculus", "url": "https://www.calculusresearch.io"},
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Institutional access available upon request"},
+    "featureList": ["Multi-LLM AI Interface", "UnderwriteAI Demo Access", "Finclusion Score API", "MarketPulse Forecast Engine", "JWT Authentication", "Real-Time Risk Scoring"]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Calculus AI Portal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Calculus AI Portal is a multi-LLM platform for institutional access to AI Labs' 16 AI products including UnderwriteAI, Finclusion Score API, and MarketPulse. Authentication is managed via JWT-secured tokens with role-based access controls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who can access the Calculus AI Portal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AI Portal is available to institutional investors, portfolio managers, research partners, and authorized borrowers. Access is granted upon request by contacting the Calculus team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What AI models are available through the portal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The portal provides access to GPT, Claude, and Gemini models plus proprietary Calculus models including UnderwriteAI, Voice AI Platform, and Lex Intelligence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the AI Portal free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Institutional access is available upon request at no charge for qualified partners. Contact hello@calculusresearch.io to request access."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the AI Portal handle security?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Calculus AI Portal uses JWT token authentication, encrypted data transmission, role-based access controls, and full audit trails for compliance and regulatory review."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-cr-charcoal font-sans">
+
+  <nav class="bg-white border-b border-cr-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 cr-focus rounded-lg">
+        <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+        <div>
+          <div class="heading-font text-xl font-semibold tracking-tight text-cr-charcoal">Calculus Research</div>
+          <div class="text-[10px] text-cr-mist tracking-widest uppercase">Financial Innovations</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-cr-charcoal/70">
+        <a href="/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+        <div class="relative group">
+          <a href="/lending/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">Lending <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[210px]">
+              <a href="/lending/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Commercial Lending</a>
+              <a href="/usda-bi/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">USDA B&amp;I Loans</a>
+            </div>
+          </div>
+        </div>
+        <a href="/real-estate/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+        <a href="/energy/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+        <a href="/labs/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+        <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+        <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="border border-cr-green-900 text-cr-green-900 bg-cr-surface2 hover:bg-cr-surface2 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="bg-cr-green-900 text-white hover:bg-cr-green-900/90 px-5 py-2.5 rounded-[14px] font-semibold transition text-sm cr-focus">Speak With Us</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden text-2xl text-cr-charcoal cr-focus rounded-lg min-w-[40px] min-h-[40px] flex items-center justify-center" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-cr-border px-6 py-6 space-y-4">
+      <a href="/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Home</a>
+      <a href="/lending/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Lending</a>
+      <a href="/usda-bi/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">USDA B&amp;I Loans</a>
+      <a href="/real-estate/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Real Estate</a>
+      <a href="/energy/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Energy</a>
+      <a href="/labs/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
+      <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
+      <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
+      <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
+      <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
+        <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
+        <a href="/contact/" class="text-center bg-cr-green-900 text-white px-5 py-3 rounded-[14px] font-semibold cr-focus">Speak With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <!-- Grid overlay for tech feel -->
+    <div class="absolute inset-0 grid-overlay pointer-events-none"></div>
+
+    <!-- Floating orbs -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-cr-green-900/5 rounded-full blur-3xl float-anim pointer-events-none"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-cr-green-900/5 rounded-full blur-3xl float-anim-delay pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 text-center relative z-10 fade-in">
+      <div class="inline-flex items-center gap-2 bg-cr-surface2 border border-cr-border text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-8">
+        <span class="w-2 h-2 bg-cr-green-600 rounded-full animate-pulse"></span>
+        Calculus AI Labs &middot; Private Intelligence Platform
+      </div>
+      <h1 class="heading-font text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-white">
+        Calculus AI Labs<br><span class="shimmer-text">AI Portal</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-4 leading-relaxed">
+        Private AI intelligence platform for Calculus clients. Automated legal analysis, quantitative research, and engineering support &mdash; powered by four frontier LLMs in one secure interface.
+      </p>
+      <p class="text-white/60 text-base md:text-lg mb-10 max-w-xl mx-auto">
+        Exclusively for Calculus Management investors, lending clients, and authorized institutional partners.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="http://34.75.120.202:3000" class="bg-cr-green-900 hover:bg-cr-green-900/90 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition inline-flex items-center justify-center gap-3 pulse-glow">
+          <i class="fas fa-right-to-bracket"></i> Login to AI Portal
+        </a>
+        <a href="#access" class="border border-white/40 text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition inline-flex items-center justify-center gap-3">
+          <i class="fas fa-key"></i> Request Access
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-white/60">
+        <div class="flex items-center gap-2"><i class="fas fa-robot text-cr-green-600"></i> 3 AI Agents</div>
+        <div class="flex items-center gap-2"><i class="fas fa-brain text-cr-green-600"></i> 4 LLM Backends</div>
+        <div class="flex items-center gap-2"><i class="fas fa-lock text-cr-green-600"></i> JWT Secured</div>
+        <div class="flex items-center gap-2"><i class="fas fa-bolt text-cr-green-600"></i> WebSocket Streaming</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM STATS -->
+  <section class="py-16 bg-cr-surface border-y border-cr-border">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">3</div>
+        <div class="text-cr-mist mt-2 text-sm">AI Agents</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">4</div>
+        <div class="text-cr-mist mt-2 text-sm">LLM Backends</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">JWT</div>
+        <div class="text-cr-mist mt-2 text-sm">Auth Protocol</div>
+      </div>
+      <div>
+        <div class="text-4xl md:text-5xl font-bold text-cr-green-600 heading-font">Live</div>
+        <div class="text-cr-mist mt-2 text-sm">Token Tracking</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-20 bg-white relative overflow-hidden">
+    <!-- Subtle grid background -->
+    <div class="absolute inset-0 grid-overlay pointer-events-none opacity-50"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Core Capabilities</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold text-cr-charcoal">Intelligent Infrastructure</h2>
+        <p class="text-cr-mist mt-4 max-w-2xl mx-auto">Purpose-built AI platform combining multiple frontier models with enterprise security and real-time observability.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Multi-Agent Pipelines -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover tech-border fade-in-delay-1">
+          <div class="w-16 h-16 bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-6">
+            <i class="fas fa-network-wired text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font text-cr-charcoal">Multi-Agent Pipelines</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Three specialized AI agents orchestrate tasks across multiple LLM backends, delivering context-aware intelligence for complex workflows.</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-scale-balanced text-cr-green-600 text-xs"></i>
+              </div>
+              <div>
+                <span class="text-cr-charcoal/80 font-medium">Lex Intelligence</span>
+                <span class="text-cr-mist"> &mdash; Legal & compliance</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-calculator text-cr-green-600 text-xs"></i>
+              </div>
+              <div>
+                <span class="text-cr-charcoal/80 font-medium">Calculus Intelligence</span>
+                <span class="text-cr-mist"> &mdash; Quant & finance</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-hammer text-cr-green-600 text-xs"></i>
+              </div>
+              <div>
+                <span class="text-cr-charcoal/80 font-medium">Forge</span>
+                <span class="text-cr-mist"> &mdash; Code & engineering</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-5 border-t border-cr-border">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">Grok</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">GPT-4o</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">Claude</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secure JWT Authentication -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover tech-border fade-in-delay-2">
+          <div class="w-16 h-16 bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-6">
+            <i class="fas fa-shield-halved text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font text-cr-charcoal">Secure JWT Authentication</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Enterprise-grade authentication with JSON Web Tokens, role-based access control, and session management built for institutional security requirements.</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-fingerprint text-cr-green-600 text-xs"></i>
+              </div>
+              <span class="text-cr-charcoal/70">Encrypted JWT token flow</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-user-shield text-cr-green-600 text-xs"></i>
+              </div>
+              <span class="text-cr-charcoal/70">Role-based access control</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-clock-rotate-left text-cr-green-600 text-xs"></i>
+              </div>
+              <span class="text-cr-charcoal/70">Auto-expiring sessions</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-5 border-t border-cr-border">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">OAuth 2.0</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">RBAC</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">HTTPS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Token & Impact Tracking -->
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover tech-border fade-in-delay-3">
+          <div class="w-16 h-16 bg-cr-surface2 rounded-2xl flex items-center justify-center text-3xl mb-6">
+            <i class="fas fa-chart-line text-cr-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 heading-font text-cr-charcoal">Live Token & Impact Tracking</h3>
+          <p class="text-cr-mist text-sm leading-relaxed mb-5">Real-time usage analytics, token consumption monitoring, and impact metrics dashboard to measure AI output quality and cost efficiency.</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-gauge-high text-cr-green-600 text-xs"></i>
+              </div>
+              <span class="text-cr-charcoal/70">Real-time token metering</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-chart-bar text-cr-green-600 text-xs"></i>
+              </div>
+              <span class="text-cr-charcoal/70">Impact metrics dashboard</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 bg-cr-surface2 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-dollar-sign text-cr-green-600 text-xs"></i>
+              </div>
+              <span class="text-cr-charcoal/70">Cost efficiency analytics</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-5 border-t border-cr-border">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">WebSocket</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">Streaming</span>
+              <span class="text-xs bg-cr-surface2 text-cr-mist px-3 py-1 rounded-full">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-20 bg-cr-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Workflow</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold text-cr-charcoal">How It Works</h2>
+        <p class="text-cr-mist mt-4 max-w-xl mx-auto">From login to actionable intelligence in seconds.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center step-connector">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5 border border-cr-border">1</div>
+          <h4 class="font-semibold mb-2 text-cr-charcoal">Authenticate</h4>
+          <p class="text-cr-mist text-sm">Securely log in via JWT-protected auth flow with role-based credentials.</p>
+        </div>
+        <div class="text-center step-connector">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5 border border-cr-border">2</div>
+          <h4 class="font-semibold mb-2 text-cr-charcoal">Select Agent</h4>
+          <p class="text-cr-mist text-sm">Choose Lex, Calculus Intelligence, or Forge depending on your task domain.</p>
+        </div>
+        <div class="text-center step-connector">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5 border border-cr-border">3</div>
+          <h4 class="font-semibold mb-2 text-cr-charcoal">Prompt & Stream</h4>
+          <p class="text-cr-mist text-sm">Submit prompts with WebSocket streaming for real-time, token-by-token responses.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto bg-cr-surface2 text-cr-green-600 rounded-2xl flex items-center justify-center text-2xl font-bold heading-font mb-5 border border-cr-border">4</div>
+          <h4 class="font-semibold mb-2 text-cr-charcoal">Track & Optimize</h4>
+          <p class="text-cr-mist text-sm">Monitor token usage, cost metrics, and impact analytics in the live dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="py-20 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 grid-overlay pointer-events-none opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-14">
+        <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Under the Hood</div>
+        <h2 class="heading-font text-4xl md:text-5xl font-bold text-cr-charcoal">Tech Stack</h2>
+        <p class="text-cr-mist mt-4 max-w-xl mx-auto">Modern, production-grade architecture built for performance and reliability.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="text-3xl mb-3"><i class="fab fa-react text-cr-green-600"></i></div>
+          <div class="font-semibold text-sm text-cr-charcoal">React 19</div>
+          <div class="text-cr-mist text-xs mt-1">Frontend</div>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="text-3xl mb-3"><i class="fas fa-code text-cr-green-600"></i></div>
+          <div class="font-semibold text-sm text-cr-charcoal">TypeScript</div>
+          <div class="text-cr-mist text-xs mt-1">Type Safety</div>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="text-3xl mb-3"><i class="fas fa-bolt text-cr-green-600"></i></div>
+          <div class="font-semibold text-sm text-cr-charcoal">FastAPI</div>
+          <div class="text-cr-mist text-xs mt-1">Backend</div>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="text-3xl mb-3"><i class="fas fa-database text-cr-green-600"></i></div>
+          <div class="font-semibold text-sm text-cr-charcoal">PostgreSQL</div>
+          <div class="text-cr-mist text-xs mt-1">Database</div>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="text-3xl mb-3"><i class="fas fa-tower-broadcast text-cr-green-600"></i></div>
+          <div class="font-semibold text-sm text-cr-charcoal">WebSocket</div>
+          <div class="text-cr-mist text-xs mt-1">Streaming</div>
+        </div>
+        <div class="bg-cr-surface border border-cr-border rounded-2xl p-6 text-center card-hover">
+          <div class="text-3xl mb-3"><i class="fab fa-docker text-cr-green-600"></i></div>
+          <div class="font-semibold text-sm text-cr-charcoal">Docker</div>
+          <div class="text-cr-mist text-xs mt-1">Containers</div>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="https://github.com/financecommander/AI-PORTAL.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-cr-mist hover:text-cr-green-900 transition">
+          <i class="fab fa-github text-lg"></i> View on GitHub &mdash; financecommander/AI-PORTAL
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS REQUIREMENTS -->
+  <section id="access" class="py-20 bg-cr-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block bg-cr-surface2 text-cr-green-600 text-sm font-medium px-6 py-2 rounded-full mb-4">Access</div>
+          <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6 text-cr-charcoal">Who Can Access the Portal?</h2>
+          <p class="text-cr-mist text-lg leading-relaxed mb-8">
+            The Calculus AI Labs AI Portal is a private, invite-only platform reserved for Calculus clients and authorized partners. Access is provisioned on a case-by-case basis.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-cr-green-600"></i>
+              </div>
+              <div>
+                <div class="font-semibold mb-1 text-cr-charcoal">Calculus Lending Clients</div>
+                <div class="text-cr-mist text-sm">Active lending, syndication, or consulting clients with current engagements.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-cr-green-600"></i>
+              </div>
+              <div>
+                <div class="font-semibold mb-1 text-cr-charcoal">Calculus Management Investors</div>
+                <div class="text-cr-mist text-sm">Accredited investors and family office partners in Calculus-managed vehicles.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-cr-surface2 rounded-[14px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-cr-green-600"></i>
+              </div>
+              <div>
+                <div class="font-semibold mb-1 text-cr-charcoal">Authorized Partners</div>
+                <div class="text-cr-mist text-sm">Strategic technology partners, institutional collaborators, and approved vendors.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-cr-border rounded-2xl p-8 tech-border">
+          <div class="text-center mb-6">
+            <div class="w-20 h-20 mx-auto bg-cr-surface2 rounded-2xl flex items-center justify-center text-4xl mb-4">
+              <i class="fas fa-lock text-cr-green-600"></i>
+            </div>
+            <h3 class="heading-font text-2xl font-bold text-cr-charcoal">Private Platform</h3>
+            <p class="text-cr-mist text-sm mt-2">Credentials are issued directly by the Calculus AI Labs team.</p>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="bg-cr-surface rounded-[14px] p-4 flex items-center gap-3 border border-cr-border">
+              <i class="fas fa-envelope text-cr-green-600"></i>
+              <span class="text-cr-charcoal/70">Request access via <span class="text-cr-green-600 font-medium">hello@calculusresearch.io</span></span>
+            </div>
+            <div class="bg-cr-surface rounded-[14px] p-4 flex items-center gap-3 border border-cr-border">
+              <i class="fas fa-user-plus text-cr-green-600"></i>
+              <span class="text-cr-charcoal/70">Onboarding within 24&ndash;48 hours</span>
+            </div>
+            <div class="bg-cr-surface rounded-[14px] p-4 flex items-center gap-3 border border-cr-border">
+              <i class="fas fa-key text-cr-green-600"></i>
+              <span class="text-cr-charcoal/70">Secure credential delivery</span>
+            </div>
+            <div class="bg-cr-surface rounded-[14px] p-4 flex items-center gap-3 border border-cr-border">
+              <i class="fas fa-headset text-cr-green-600"></i>
+              <span class="text-cr-charcoal/70">Dedicated onboarding support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 grid-overlay pointer-events-none opacity-30"></div>
+    <!-- Glow effects -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cr-green-900/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6 text-cr-charcoal">Ready to Access the Portal?</h2>
+      <p class="text-cr-mist text-lg mb-10 max-w-xl mx-auto">Leverage multi-model AI intelligence for legal analysis, quantitative research, and engineering workflows &mdash; all in one secure platform.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="http://34.75.120.202:3000" class="bg-cr-green-900 hover:bg-cr-green-900/90 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition inline-flex items-center justify-center gap-3 pulse-glow">
+          <i class="fas fa-right-to-bracket"></i> Login to AI Portal
+        </a>
+        <a href="/contact/" class="border border-cr-green-900 text-cr-green-900 hover:bg-cr-surface2 px-10 py-4 rounded-2xl font-semibold text-lg transition inline-flex items-center justify-center gap-3">
+          <i class="fas fa-paper-plane"></i> Request Access
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO: AI PORTAL -->
+  <section class="py-20 bg-cr-surface border-t border-cr-border">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="heading-font text-2xl font-bold mb-6 text-cr-charcoal">What Is the Calculus AI Portal?</h2>
+      <div class="text-cr-charcoal/70 space-y-4 leading-relaxed">
+        <p>The Calculus AI Portal is a multi-LLM research interface developed by Calculus AI Labs, the research and development division of Calculus, a multi-discipline finance platform headquartered in Boston, Massachusetts. The portal provides institutional clients — including investors, portfolio managers, research partners, and authorized borrowers — with secure, browser-based access to the full suite of Calculus AI products.</p>
+        <p>Through the portal, authorized users can interact with 16 AI products spanning automated underwriting, alternative credit scoring, market intelligence, settlement infrastructure, voice AI, and quantitative trading models. The platform supports multiple large language models including GPT, Claude, and Gemini alongside proprietary Calculus models such as UnderwriteAI, Voice AI Platform, and Lex Intelligence. All sessions are authenticated via JWT tokens with role-based access controls and encrypted data transmission.</p>
+        <p>The Calculus AI Portal serves as the primary access point for running live demos of UnderwriteAI, querying Finclusion Score API documentation, exploring MarketPulse market forecasts, and interacting with research prototypes under development. The portal is designed for institutional-grade security and compliance, with full audit trails for every interaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FACTS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="heading-font text-xl font-bold mb-6 text-cr-charcoal">Key Facts — Calculus AI Portal</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-cr-border">
+              <th class="py-3 pr-6 text-cr-mist font-medium">Attribute</th>
+              <th class="py-3 text-cr-mist font-medium">Detail</th>
+            </tr>
+          </thead>
+          <tbody class="text-cr-charcoal/70">
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Platform Type</td><td class="py-3">Multi-LLM AI Research Interface</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">AI Products Available</td><td class="py-3">16 products across 8 categories</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">LLM Models Supported</td><td class="py-3">GPT, Claude, Gemini, proprietary Calculus models</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Flagship Product</td><td class="py-3">UnderwriteAI — automated underwriting in under 4 seconds</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Authentication</td><td class="py-3">JWT token-based with role-based access controls</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Target Users</td><td class="py-3">Institutional investors, portfolio managers, research partners</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Access</td><td class="py-3">Available upon request — hello@calculusresearch.io</td></tr>
+            <tr class="border-b border-cr-border"><td class="py-3 pr-6 font-medium">Parent Organization</td><td class="py-3">Calculus (Boston, MA)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-cr-surface border-t border-cr-border">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="heading-font text-3xl font-bold text-center mb-12 text-cr-charcoal">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>What is the Calculus AI Portal?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">The Calculus AI Portal is a multi-LLM research platform that provides institutional clients with secure, browser-based access to Calculus AI Labs' full suite of 16 AI products. Users can run live demos of UnderwriteAI, access Finclusion Score API documentation, explore MarketPulse market forecasts, and interact with research prototypes. Authentication is managed via JWT security tokens.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>Who can access the Calculus AI Portal?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">The AI Portal is available to institutional investors, portfolio managers, research partners, and authorized borrowers. Access is granted upon request by contacting the Calculus team at hello@calculusresearch.io. The platform is designed for institutional-grade use with compliance-ready audit trails.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>What AI models are available through the portal?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">The portal supports multiple leading large language models including GPT, Claude, and Gemini, alongside proprietary Calculus models such as UnderwriteAI for automated underwriting, Voice AI Platform for conversational AI, and Lex Intelligence for legal document analysis. All 16 AI products in the Calculus AI Labs catalog are accessible through the portal interface.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>Is the AI Portal free to use?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">Institutional access to the Calculus AI Portal is available upon request at no charge for qualified partners. This includes access to live product demos, API documentation, and research prototypes. Contact hello@calculusresearch.io to request access.</p>
+        </details>
+        <details class="bg-cr-surface2 border border-cr-border rounded-2xl p-6">
+          <summary class="font-semibold text-lg flex items-center justify-between cursor-pointer text-cr-charcoal"><span>How does the AI Portal handle security?</span><span class="chevron text-cr-green-600"><i class="fas fa-chevron-down"></i></span></summary>
+          <p class="mt-4 text-cr-charcoal/70 leading-relaxed">The Calculus AI Portal uses JWT (JSON Web Token) authentication with role-based access controls. All data transmission is encrypted, and every user interaction generates a full audit trail for compliance and regulatory review. The platform is built for institutional-grade security requirements.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-cr-charcoal py-16 border-t border-cr-charcoal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-cr-green-900 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg heading-font">C</span></div>
+            <div class="heading-font text-lg font-semibold text-white">Calculus Research</div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Multi-discipline finance platform. Direct lending, AI research, and institutional asset management.</p>
+          <div class="mt-4 text-sm text-white/40">Boston, MA &middot; Windsor, CT</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Platform</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/lending/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Lending</a>
+            <a href="/usda-bi/" class="block text-white/30 hover:text-cr-green-600 transition cr-focus rounded pl-3 text-xs">USDA B&amp;I Loans</a>
+            <a href="/real-estate/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Real Estate</a>
+            <a href="/energy/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Energy</a>
+            <a href="/labs/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">AI Labs</a>
+            <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded"><span class="live-dot mr-1.5"></span>AI Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Resources</h4>
+          <div class="space-y-3 text-sm">
+            <a href="/consulting/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Consulting</a>
+            <a href="/development/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Development Finance</a>
+            <a href="/portfolio/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Portfolio</a>
+            <a href="/insights/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Insights</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-white/60 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
+            <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>&copy; 2026 Calculus. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/50 transition cr-focus rounded">Privacy Policy</a>
+          <a href="/terms/" class="hover:text-white/50 transition cr-focus rounded">Terms of Service</a>
+          <a href="#" class="hover:text-white/50 transition cr-focus rounded">Disclaimers</a>
+        </div>
+        <div>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of any security or investment product. Lending activities subject to applicable federal and state regulations. Past performance does not guarantee future results.</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="/chatbot.js"></script>
+</body>
+</html>
