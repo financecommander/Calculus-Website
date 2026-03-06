@@ -1,6 +1,6 @@
 """
 Calculus AI Chatbot — FastAPI Backend
-Powered by Calculus Swarm GPU infrastructure (Ollama + Llama 3.1).
+Powered by Calculus GPU infrastructure (Ollama + Llama 3.1).
 Run: uvicorn server:app --host 127.0.0.1 --port 8091
 """
 
@@ -22,7 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Ollama client via OpenAI-compatible API (Calculus Swarm GPU)
+# Ollama client via OpenAI-compatible API (Calculus GPU)
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://10.142.0.6:11434")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 client = OpenAI(base_url=f"{OLLAMA_HOST}/v1", api_key="ollama")
@@ -175,6 +175,6 @@ async def health():
     return {
         "status": "ok",
         "service": "calculus-chatbot",
-        "engine": "Calculus Swarm GPU",
+        "engine": "Calculus GPU",
         "model": OLLAMA_MODEL,
     }
