@@ -7,6 +7,9 @@
   <meta name="description" content="Calculus AI Labs: explainable AI underwriting in under 4 seconds (700+ variables), alternative credit scoring API for fintechs, and proprietary market forecasting. MLOps-driven model governance. Boston, MA.">
   <meta property="og:title" content="Calculus AI Labs — AI Research & Product Development">
   <meta property="og:description" content="Where Frontier AI Meets Real-World Capital. Proprietary AI research powering financial inclusion, food security, and energy resilience.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculus AI Labs — AI Research & Product Development">
+  <meta name="twitter:description" content="Where Frontier AI Meets Real-World Capital. Proprietary AI research powering financial inclusion, food security, and energy resilience.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.calculusresearch.io/labs/">
   <link rel="canonical" href="https://www.calculusresearch.io/labs/">
@@ -184,7 +187,15 @@
         <a href="/labs/" class="nav-link active text-cr-green-900 hover:text-cr-green-900 transition cr-focus rounded">AI Labs</a>
         <a href="/consulting/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
         <a href="/portfolio/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
-        <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">About</a>
+        <div class="relative group">
+          <a href="/about/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded inline-flex items-center gap-1">About <i class="fas fa-chevron-down text-[9px] opacity-40 transition-transform group-hover:rotate-180"></i></a>
+          <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white border border-cr-border rounded-[14px] shadow-cr-md py-2 min-w-[180px]">
+              <a href="/about/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">About Us</a>
+              <a href="/team/" class="block px-4 py-2.5 text-sm text-cr-charcoal/70 hover:text-cr-green-900 hover:bg-cr-surface2 transition rounded-lg mx-1">Our Team</a>
+            </div>
+          </div>
+        </div>
         <a href="/contact/" class="nav-link hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
       </div>
       <div class="hidden lg:flex items-center gap-3">
@@ -205,6 +216,7 @@
       <a href="/consulting/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Consulting</a>
       <a href="/portfolio/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Portfolio</a>
       <a href="/about/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">About</a>
+      <a href="/team/" class="block text-cr-charcoal/50 hover:text-cr-green-900 transition cr-focus rounded pl-4 text-sm">Our Team</a>
       <a href="/contact/" class="block text-cr-charcoal/70 hover:text-cr-green-900 transition cr-focus rounded">Contact</a>
       <div class="pt-4 border-t border-cr-border flex flex-col gap-3">
         <a href="http://34.75.120.202:3000" target="_blank" rel="noopener noreferrer" class="text-center border border-cr-green-900 text-cr-green-900 px-5 py-3 rounded-[14px] font-semibold cr-focus"><span class="live-dot mr-1.5"></span>AI Portal</a>
@@ -402,37 +414,37 @@
       </div>
 
       <!-- TRITON PLATFORM BANNER -->
-      <div class="bg-gradient-to-r from-indigo-950 to-slate-900 border border-indigo-500/30 rounded-2xl p-8 md:p-10 mb-12 relative overflow-hidden">
+      <div class="bg-gradient-to-r from-indigo-950 to-slate-900 border border-cr-info/30 rounded-2xl p-8 md:p-10 mb-12 relative overflow-hidden">
         <div class="absolute top-6 right-6 flex items-center gap-2">
-          <span class="bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">PLATFORM</span>
+          <span class="bg-cr-info text-white text-xs font-bold px-3 py-1 rounded-full">PLATFORM</span>
         </div>
         <div class="flex flex-col md:flex-row items-start gap-8">
-          <div class="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
-            <i class="fas fa-microchip text-indigo-400"></i>
+          <div class="w-16 h-16 bg-cr-info/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+            <i class="fas fa-microchip text-cr-info"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl md:text-3xl font-semibold mb-1 heading-font">Triton Compression Engine</h3>
-            <p class="text-indigo-400 text-sm font-medium mb-4">The Inference Engine Behind Calculus AI Labs</p>
+            <p class="text-cr-info text-sm font-medium mb-4">The Inference Engine Behind Calculus AI Labs</p>
             <p class="text-cr-charcoal/70 text-sm leading-relaxed mb-6">Proprietary compiler technology that compresses machine learning models up to 15x while maintaining or exceeding baseline quality. Powers real-time inference across Calculus products and available for enterprise licensing.</p>
             <div class="grid grid-cols-3 gap-4 mb-6">
               <div class="bg-white/60 rounded-[14px] p-4 text-center">
-                <div class="text-2xl font-bold text-indigo-400 heading-font">15x</div>
+                <div class="text-2xl font-bold text-cr-info heading-font">15x</div>
                 <div class="text-xs text-cr-mist mt-1">Compression</div>
               </div>
               <div class="bg-white/60 rounded-[14px] p-4 text-center">
-                <div class="text-2xl font-bold text-indigo-400 heading-font">101%</div>
+                <div class="text-2xl font-bold text-cr-info heading-font">101%</div>
                 <div class="text-xs text-cr-mist mt-1">Quality Retained</div>
               </div>
               <div class="bg-white/60 rounded-[14px] p-4 text-center">
-                <div class="text-2xl font-bold text-indigo-400 heading-font">465+</div>
+                <div class="text-2xl font-bold text-cr-info heading-font">465+</div>
                 <div class="text-xs text-cr-mist mt-1">Validation Tests</div>
               </div>
             </div>
             <ul class="text-sm text-cr-mist space-y-2">
-              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Powers UnderwriteAI, Voice AI, EdgeForge, and Finclusion inference</li>
-              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Enterprise licensing for custom model compression</li>
-              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Mobile, edge, and air-gapped deployment</li>
-              <li class="flex items-center gap-2"><span class="text-indigo-400 text-xs"><i class="fas fa-check"></i></span> Healthcare (HIPAA-local), defense (air-gapped), autonomous systems</li>
+              <li class="flex items-center gap-2"><span class="text-cr-info text-xs"><i class="fas fa-check"></i></span> Powers UnderwriteAI, Voice AI, EdgeForge, and Finclusion inference</li>
+              <li class="flex items-center gap-2"><span class="text-cr-info text-xs"><i class="fas fa-check"></i></span> Enterprise licensing for custom model compression</li>
+              <li class="flex items-center gap-2"><span class="text-cr-info text-xs"><i class="fas fa-check"></i></span> Mobile, edge, and air-gapped deployment</li>
+              <li class="flex items-center gap-2"><span class="text-cr-info text-xs"><i class="fas fa-check"></i></span> Healthcare (HIPAA-local), defense (air-gapped), autonomous systems</li>
             </ul>
           </div>
         </div>
@@ -446,7 +458,7 @@
           <div class="absolute top-6 right-6"><span class="bg-cr-green-900 text-white text-xs font-bold px-3 py-1 rounded-full">FLAGSHIP</span></div>
           <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-robot text-cr-green-600"></i></div>
           <h3 class="text-2xl font-semibold mb-1 heading-font">UnderwriteAI</h3>
-          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-info text-xs font-medium mb-3">Powered by Triton</p>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Real-Time Automated Underwriting</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">Institutional-grade automated underwriting engine that analyzes 700+ variables in under 4 seconds. Delivers risk scores, deal feasibility assessments, and term sheet recommendations with explainable AI outputs.</p>
           <div class="grid grid-cols-2 gap-4 mb-6">
@@ -460,16 +472,16 @@
           </ul>
         </div>
 
-        <div class="bg-cr-surface border border-amber-500/30 rounded-2xl p-8 card-hover relative">
-          <div class="absolute top-6 right-6"><span class="bg-amber-500 text-cr-charcoal text-xs font-bold px-3 py-1 rounded-full">LAUNCHING</span></div>
-          <div class="w-14 h-14 bg-amber-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-coins text-amber-400"></i></div>
+        <div class="bg-cr-surface border border-cr-gold-500/30 rounded-2xl p-8 card-hover relative">
+          <div class="absolute top-6 right-6"><span class="bg-cr-gold-500 text-cr-charcoal text-xs font-bold px-3 py-1 rounded-full">LAUNCHING</span></div>
+          <div class="w-14 h-14 bg-cr-gold-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-coins text-cr-gold-500"></i></div>
           <h3 class="text-2xl font-semibold mb-2 heading-font">Constitutional Tender Terminal</h3>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Institutional Precious Metals Infrastructure</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">End-to-end precious metals facilitation platform connecting buyers to allocated vaulting across five international depositories. Multi-currency execution with real-time spot pricing and book-entry transfer capabilities.</p>
           <div class="grid grid-cols-3 gap-4 mb-6">
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-amber-400 heading-font">5</div><div class="text-xs text-cr-mist mt-1">Global Vaults</div></div>
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-amber-400 heading-font">6</div><div class="text-xs text-cr-mist mt-1">Currencies</div></div>
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-amber-400 heading-font">&lt;4s</div><div class="text-xs text-cr-mist mt-1">Execution</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-cr-gold-500 heading-font">5</div><div class="text-xs text-cr-mist mt-1">Global Vaults</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-cr-gold-500 heading-font">6</div><div class="text-xs text-cr-mist mt-1">Currencies</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-2xl font-bold text-cr-gold-500 heading-font">&lt;4s</div><div class="text-xs text-cr-mist mt-1">Execution</div></div>
           </div>
           <ul class="text-sm text-cr-mist space-y-2">
             <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Real-time spot pricing with FX conversion</li>
@@ -525,17 +537,17 @@
       <div class="mb-4"><span class="text-cr-green-600 text-xs font-semibold uppercase tracking-widest">AI Products</span></div>
       <div class="grid md:grid-cols-2 gap-8 mb-12">
 
-        <div class="bg-cr-surface border border-blue-500/30 rounded-2xl p-8 card-hover relative">
-          <div class="absolute top-6 right-6"><span class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-MODEL</span></div>
-          <div class="w-14 h-14 bg-blue-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-headset text-blue-400"></i></div>
+        <div class="bg-cr-surface border border-cr-info/30 rounded-2xl p-8 card-hover relative">
+          <div class="absolute top-6 right-6"><span class="bg-cr-info text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-MODEL</span></div>
+          <div class="w-14 h-14 bg-cr-info/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-headset text-cr-info"></i></div>
           <h3 class="text-2xl font-semibold mb-1 heading-font">Voice AI Platform</h3>
-          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-info text-xs font-medium mb-3">Powered by Triton</p>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Intelligent Voice Agents for Financial Services</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">Multi-model voice AI system that routes conversations across frontier LLMs based on complexity, compliance sensitivity, and latency requirements. Progressive authentication with built-in regulatory guardrails.</p>
           <div class="grid grid-cols-3 gap-4 mb-6">
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-blue-400 heading-font">4</div><div class="text-xs text-cr-mist mt-1">LLMs</div></div>
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-blue-400 heading-font">10</div><div class="text-xs text-cr-mist mt-1">Compliance Gates</div></div>
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-blue-400 heading-font">&lt;850ms</div><div class="text-xs text-cr-mist mt-1">Response</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-info heading-font">4</div><div class="text-xs text-cr-mist mt-1">LLMs</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-info heading-font">10</div><div class="text-xs text-cr-mist mt-1">Compliance Gates</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-info heading-font">&lt;850ms</div><div class="text-xs text-cr-mist mt-1">Response</div></div>
           </div>
           <ul class="text-sm text-cr-mist space-y-2">
             <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Multi-LLM orchestration with automatic routing</li>
@@ -545,16 +557,16 @@
           </ul>
         </div>
 
-        <div class="bg-cr-surface border border-emerald-500/30 rounded-2xl p-8 card-hover relative">
-          <div class="absolute top-6 right-6"><span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">PIPELINE</span></div>
-          <div class="w-14 h-14 bg-emerald-500/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-scale-balanced text-emerald-400"></i></div>
+        <div class="bg-cr-surface border border-cr-success/30 rounded-2xl p-8 card-hover relative">
+          <div class="absolute top-6 right-6"><span class="bg-cr-success text-white text-xs font-bold px-3 py-1 rounded-full">PIPELINE</span></div>
+          <div class="w-14 h-14 bg-cr-success/10 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-scale-balanced text-cr-green-600"></i></div>
           <h3 class="text-2xl font-semibold mb-2 heading-font">Lex Intelligence</h3>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Multi-Agent Legal Research</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">Six-agent legal research pipeline that cross-validates findings across four frontier models to produce structured legal memoranda with confidence ratings and verified citations.</p>
           <div class="grid grid-cols-3 gap-4 mb-6">
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-emerald-400 heading-font">6</div><div class="text-xs text-cr-mist mt-1">Agents</div></div>
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-emerald-400 heading-font">4</div><div class="text-xs text-cr-mist mt-1">Models</div></div>
-            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-emerald-400 heading-font">&lt;$0.60</div><div class="text-xs text-cr-mist mt-1">Per Query</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">6</div><div class="text-xs text-cr-mist mt-1">Agents</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">4</div><div class="text-xs text-cr-mist mt-1">Models</div></div>
+            <div class="bg-white rounded-[14px] p-4 text-center"><div class="text-xl font-bold text-cr-green-600 heading-font">&lt;$0.60</div><div class="text-xs text-cr-mist mt-1">Per Query</div></div>
           </div>
           <ul class="text-sm text-cr-mist space-y-2">
             <li class="flex items-center gap-2"><span class="text-cr-green-600 text-xs"><i class="fas fa-check"></i></span> Cross-model validation and bias reduction</li>
@@ -572,7 +584,7 @@
         <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
           <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-code text-cr-green-600"></i></div>
           <h3 class="text-2xl font-semibold mb-1 heading-font">Finclusion Score API</h3>
-          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-info text-xs font-medium mb-3">Powered by Triton</p>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Alternative Credit Scoring for Fintechs</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">RESTful API that delivers alternative credit scores for unbanked and underbanked populations. Designed for fintech platforms, neobanks, and microfinance institutions seeking to expand access to credit.</p>
           <ul class="text-sm text-cr-mist space-y-2">
@@ -616,7 +628,7 @@
         <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
           <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-chart-bar text-cr-green-600"></i></div>
           <h3 class="text-2xl font-semibold mb-1 heading-font">MarketPulse Forecast Engine</h3>
-          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-info text-xs font-medium mb-3">Powered by Triton</p>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Daily Market Forecasting Reports</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">Proprietary quantitative models generate daily market forecasting reports across asset classes. Combines alternative data, sentiment analysis, macro indicators, and technical signals into actionable intelligence.</p>
           <ul class="text-sm text-cr-mist space-y-2">
@@ -676,7 +688,7 @@
         <div class="bg-cr-surface border border-cr-border rounded-2xl p-8 card-hover">
           <div class="w-14 h-14 bg-cr-surface2 rounded-[14px] flex items-center justify-center text-2xl mb-6"><i class="fas fa-bolt text-cr-green-600"></i></div>
           <h3 class="text-2xl font-semibold mb-1 heading-font">EdgeForge</h3>
-          <p class="text-indigo-400 text-xs font-medium mb-3">Powered by Triton</p>
+          <p class="text-cr-info text-xs font-medium mb-3">Powered by Triton</p>
           <p class="text-cr-green-600 text-sm font-medium mb-4">Edge ML Deployment</p>
           <p class="text-cr-mist text-sm leading-relaxed mb-6">Deployment framework for pushing machine learning models to resource-constrained environments. Automated compression, hardware-aware optimization, and streamlined deployment pipelines.</p>
           <ul class="text-sm text-cr-mist space-y-2">
@@ -982,6 +994,7 @@
           <div class="space-y-3 text-sm">
             <a href="mailto:hello@calculusresearch.io" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">hello@calculusresearch.io</a>
             <a href="/about/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">About Us</a>
+            <a href="/team/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Our Team</a>
             <a href="/contact/" class="block text-white/40 hover:text-cr-green-600 transition cr-focus rounded">Get In Touch</a>
           </div>
         </div>
